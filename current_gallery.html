@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Gallery</title>
+    <style>
+        /* Reset some default styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Style for the main heading */
+        h1 {
+            margin: 0;
+        }
+
+        /* Styling for the image gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Styling for individual gallery items */
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center; /* Center text vertically and horizontally */
+            overflow: hidden;
+            cursor: pointer; /* Add cursor style */
+            transition: transform 0.2s ease-in-out; /* Add transition for smoother effect */
+        }
+
+        /* Scale up on hover */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Style for gallery item images */
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 150px; /* Set a fixed height for the images */
+            width: auto;
+            height: auto;
+        }
+
+        /* Style for gallery item headings */
+        .gallery-item h2 {
+            font-size: 1.5rem;
+            padding: 10px;
+            margin: 0;
+        }
+
+        /* Style for gallery item descriptions */
+        .gallery-item p {
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Current Gallery</h1>
+    </header>
+    <div class="gallery">
+        <!-- Gallery Item 1: Current Electricity -->
+        <div class="gallery-item">
+            <img src="current_picture/current electricity.jpg" alt="Current Electricity">
+            <h2>Current Electricity</h2>
+            <p>Description of current electricity goes here.</p>
+        </div>
+
+        <!-- Gallery Item 2: Thermoelectric Effect -->
+        <div class="gallery-item">
+            <img src="current_picture/thermo electric effect.jpg" alt="Thermoelectric Effect">
+            <h2>Thermoelectric Effect</h2>
+            <p>Description of thermoelectric effect goes here.</p>
+        </div>
+
+        <!-- Gallery Item 3: Heating Effect of Current -->
+        <div class="gallery-item">
+            <img src="current_picture/heating effect of current.jpg" alt="Heating Effect of Current">
+            <h2>Heating Effect of Current</h2>
+            <p>Description of heating effect of current goes here.</p>
+        </div>
+
+        <!-- Gallery Item 4: Chemical Effect of Current -->
+        <div class="gallery-item">
+            <img src="current_picture/chemical effect of current.jpg" alt="Chemical Effect of Current">
+            <h2>Chemical Effect of Current</h2>
+            <p>Description of chemical effect of current goes here.</p>
+        </div>
+
+        <!-- Gallery Item 5: Electric Field and Potential -->
+        <div class="gallery-item">
+            <img src="current_picture/electric field.png" alt="Electric Field and Potential">
+            <h2>Electric Field and Potential</h2>
+            <p>Description of electric field and potential goes here.</p>
+        </div>
+
+        <!-- Gallery Item 6: Capacitance -->
+        <div class="gallery-item">
+            <img src="current_picture/capacitance.jpg" alt="Capacitance">
+            <h2>Capacitance</h2>
+            <p>Description of capacitance and its applications goes here.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Gallery</title>
+    <style>
+        /* Reset default styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Main heading styling */
+        h1 {
+            margin: 0;
+        }
+
+        /* Gallery container styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Gallery item styling */
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            cursor: pointer; /* Add cursor style */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transitions for smoother effect */
+        }
+
+        /* Scale up on hover and add shadow */
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Gallery item image styling */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            width: 100%; /* Make the image fit the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Gallery item heading styling */
+        .gallery-item h2 {
+            font-size: 1.5rem;
+            padding: 10px;
+            margin: 0;
+        }
+
+        /* Gallery item description styling */
+        .gallery-item p {
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wave Gallery</h1>
+    </header>
+    <div class="gallery">
+        <!-- Gallery Item 1: Wave -->
+        <div class="gallery-item">
+            <img src="wave_photo/wave.jpg" alt="Wave">
+            <h2>Wave</h2>
+            <p>Description of waves goes here.</p>
+        </div>
+
+        <!-- Gallery Item 2: Superposition of Waves -->
+        <div class="gallery-item">
+            <img src="wave_photo/superposition of wave.jpg" alt="Superposition of Waves">
+            <h2>Superposition of Waves</h2>
+            <p>Description of superposition of waves goes here.</p>
+        </div>
+
+        <!-- Gallery Item 3: Waves in Pipes and Strings -->
+        <div class="gallery-item">
+            <img src="wave_photo/wave in pipe and string.jpg" alt="Waves in Pipes and Strings">
+            <h2>Waves in Pipes and Strings</h2>
+            <p>Description of waves in pipes and strings goes here.</p>
+        </div>
+
+        <!-- Gallery Item 4: Acoustic Phenomena -->
+        <div class="gallery-item">
+            <img src="wave_photo/Acoustic Phenomena.jpg" alt="Acoustic Phenomena">
+            <h2>Acoustic Phenomena</h2>
+            <p>Description of acoustic phenomena goes here.</p>
+        </div>
+    </div>
+</body>
+</html>

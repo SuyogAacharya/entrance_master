@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology of the Following Gallery</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Page title styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Gallery container styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Gallery item styles */
+        .gallery-item {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer; /* Cursor set to hand */
+        }
+
+        /* Image styles */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Topic title styles */
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Topic description styles */
+        .topic-description {
+            font-size: 16px;
+            padding: 10px;
+            color: #555;
+        }
+
+        /* Hover effect on gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Biology of the Following Gallery</h1>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <!-- Plasmodium -->
+        <div class="gallery-item">
+            <img src="bof_photo/plasmodium.jpg" alt="blank">
+            <div class="topic-title">Plasmodium</div>
+            <div class="topic-description">Detailed lecture about Plasmodium</div>
+        </div>
+
+              <!--Paramecium  -->
+              <div class="gallery-item">
+                <img src="bof_photo/paramecium.jpg" alt="blank">
+                <div class="topic-title">Paramecium</div>
+                <div class="topic-description">Detailed lecture about Paramecium </div>
+            </div>
+
+                 <!--Earthworm  -->
+        <div class="gallery-item">
+          <img src="bof_photo/Earthworm.jpg" alt="blank">
+          <div class="topic-title">Earthworm</div>
+          <div class="topic-description">Detailed lecture about Earthworm </div>
+      </div>
+
+                 <!-- Frog -->
+        <div class="gallery-item">
+          <img src="bof_photo/Frog.jpg" alt="blank">
+          <div class="topic-title">Frog</div>
+          <div class="topic-description">Detailed lecture about Frog </div>
+      </div>
+          
+        
+    </div>
+</body>
+</html>

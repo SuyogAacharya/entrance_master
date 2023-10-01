@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Gallery</title>
+    <style>
+        /* Reset default styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Main heading styling */
+        h1 {
+            margin: 0;
+        }
+
+        /* Gallery container styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Gallery item styling */
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            cursor: pointer; /* Add cursor style */
+            transition: transform 0.2s ease-in-out; /* Add transition for smoother effect */
+        }
+
+        /* Scale up on hover */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Gallery item image styling */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px; /* Set a maximum height to make boxes uniform */
+        }
+
+        /* Gallery item heading styling */
+        .gallery-item h2 {
+            font-size: 1.5rem;
+            padding: 10px;
+            margin: 0;
+        }
+
+        /* Gallery item description styling */
+        .gallery-item p {
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magnetism Gallery</h1>
+    </header>
+    <div class="gallery">
+        <!-- Gallery Item 1: Magnetism -->
+        <div class="gallery-item">
+            <img src="magnetic_photo/magnetisim.jpg" alt="Magnetism">
+            <h2>Magnetism</h2>
+            <p>Description of magnetism goes here.</p>
+        </div>
+
+        <!-- Gallery Item 2: Magnetic Effect of Current -->
+        <div class="gallery-item">
+            <img src="magnetic_photo/magnetic effect of current.jpg" alt="Magnetic Effect of Current">
+            <h2>Magnetic Effect of Current</h2>
+            <p>Description of the magnetic effect of current goes here.</p>
+        </div>
+
+        <!-- Gallery Item 3: Electromagnetic Induction -->
+        <div class="gallery-item">
+            <img src="magnetic_photo/electro magnetic induction.jpg" alt="Electromagnetic Induction">
+            <h2>Electromagnetic Induction</h2>
+            <p>Description of electromagnetic induction goes here.</p>
+        </div>
+
+        <!-- Gallery Item 4: Alternating Current -->
+        <div class="gallery-item">
+            <img src="magnetic_photo/Alternating current.jpg" alt="Alternating Current">
+            <h2>Alternating Current</h2>
+            <p>Description of alternating current goes here.</p>
+        </div>
+    </div>
+</body>
+</html>

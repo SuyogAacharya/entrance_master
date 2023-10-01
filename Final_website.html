@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance Master Login</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('login page.jpg') no-repeat center;
+            background-size: cover; /* Make sure the image covers the entire body */
+        }
+
+        /* Login form container */
+        .wrapper {
+            width: 400px;
+            background: url('photo.jpg') no-repeat center; /* Background image */
+            background-size: cover; /* Make sure the image covers the entire login box */
+            border: 1px solid #e0e0e0; /* Light gray border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .wrapper h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input box styles */
+        .input-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 45px;
+            background: #f2f2f2; /* Light gray background */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            padding: 10px;
+            outline: none;
+        }
+
+        .input-box input::placeholder {
+            color: #999; /* Light gray placeholder text */
+        }
+
+        /* Login button styles */
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            background: #007bff; /* Blue button */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff; /* White text */
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Register link styles */
+        .register-link {
+            font-size: 14px;
+            text-align: center;
+            color: #666; /* Gray text */
+            margin-top: 20px;
+        }
+
+        .register-link a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Entrance Master Login</h1>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button type="button" class="btn" onclick="login()">Login</button>
+        <div class="register-link">
+            <p>Don't have an account? <a href="registration.html">Register here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            // Get the entered username and password
+            var enteredUsername = document.getElementById("username").value;
+            var enteredPassword = document.getElementById("password").value;
+
+            // Define the allowed username and password
+            var allowedUsername = "acharya.sulav2061@gmail.com";
+            var allowedPassword = "Admin@098"; 
+            var allowedUsername = "boymaster957@gmail.com";
+            var allowedPassword = "Admin@0987";
+
+            // Check if either the username or password is empty
+            if (!enteredUsername || !enteredPassword) {
+                alert("Please enter both a username and password.");
+                return;
+            }
+
+            // Check if the entered credentials match the allowed ones
+            if (enteredUsername === allowedUsername && enteredPassword === allowedPassword) {
+                // Redirect to the specified login page
+                window.location.href = "sidebar.html";
+            } else {
+                // Display an error message (you can customize this)
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

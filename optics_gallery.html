@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optics Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gallery-item h2 {
+            font-size: 1.5rem;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Optics Gallery</h1>
+    </header>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="optics_photo/refraction at plane mirror and curved surface.jpg" alt="Refraction at Plane Mirror and Curved Surface">
+            <h2>Refraction at Plane Mirror and Curved Surface</h2>
+            <p>Description of refraction at plane mirror and curved surface goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/reflection at plane surface and tir.jpg" alt="Reflection at Plane Surface and Total Internal Reflection">
+            <h2>Reflection at Plane Surface and Total Internal Reflection</h2>
+            <p>Description of reflection at plane surface and total internal reflection goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/lens.jpg" alt="Lens">
+            <h2>Lens</h2>
+            <p>Description of lenses and their properties goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/refraction through prism.jpg" alt="blank">
+            <h2>Refraction through Prism and Dispersion of Light</h2>
+            <p>Description of refraction through a prism and dispersion of light goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/human eye.jpg" alt="Human Eye and Optical Instruments">
+            <h2>Human Eye and Optical Instruments</h2>
+            <p>Description of the human eye and various optical instruments goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/photometry.jpg" alt="Photometry">
+            <h2>Photometry</h2>
+            <p>Description of photometry and its applications goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/velocity of light.jpg" alt="Velocity of Light">
+            <h2>Velocity of Light</h2>
+            <p>Description of the speed of light and its significance goes here.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="optics_photo/wave optics.jpg" alt="Wave Optics">
+            <h2>Wave Optics</h2>
+            <p>Description of wave optics and its principles goes here.</p>
+        </div>
+    </div>
+</body>
+</html>

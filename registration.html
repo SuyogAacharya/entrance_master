@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('entrance_master/entrance_master_logo.jpg') no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Registration form container */
+        .wrapper {
+            width: 420px;
+            background: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px 40px;
+            backdrop-filter: blur(20px);
+            color: #000;
+            border-radius: 10px;
+        }
+
+        .wrapper h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px; /* Added spacing below the title */
+        }
+
+        /* Input box styles */
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+            border: 2px solid #000;
+            border-radius: 40px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            color: #333; /* Darkened text color for better readability */
+            padding: 10px 20px; /* Adjusted padding to ensure text visibility */
+            outline: none;
+            text-align: left; /* Align text to the left for input fields */
+        }
+
+        .input-box input::placeholder {
+            color: #777; /* Lighter placeholder text color */
+            text-align: left; /* Align placeholder text to the left */
+        }
+
+        /* Select box styles */
+        .select-box {
+            width: 100%;
+            margin-bottom: 20px;
+            border: 2px solid #000;
+            border-radius: 40px;
+        }
+
+        .select-box select {
+            width: 100%;
+            height: 50px;
+            border: none;
+            font-size: 16px;
+            color: #333; /* Darkened text color for better readability */
+            padding: 10px 15px; /* Adjusted padding to ensure text visibility */
+            background: transparent;
+            outline: none;
+        }
+
+        /* Register button styles */
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            background: #0abe0a;
+            border: none;
+            outline: none;
+            border-radius: 48px;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* Validation error message styles */
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h1>Registration</h1>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-box">
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="input-box">
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="select-box">
+            <select id="class">
+                <option value="" disabled selected>Select Class</option>
+                <option value="Class 11">Class 11</option>
+                <option value="Class 12">Class 12</option>
+                <option value="Fresher">Fresher</option>
+                <option value="Dropper">Dropper</option>
+            </select>
+        </div>
+        <div class="select-box">
+            <select id="faculty">
+                <option value="" disabled selected>Select Faculty</option>
+                <option value="MBBS Entrance">MBBS Entrance</option>
+                <option value="Nursing Entrance">Nursing Entrance</option>
+                <option value="BDS Entrance">BDS Entrance</option>
+            </select>
+        </div>
+        <button type="submit" class="btn" onclick="registerUser()">Register</button>
+        <a href="login.html"></a>
+        <div class="error-message" id="error-message"></div>
+    </div>
+
+    <script>
+        function registerUser() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value; // Added password field
+            const selectedClass = document.getElementById('class').value;
+            const selectedFaculty = document.getElementById('faculty').value;
+
+            if (!username || !email || !phone || !password || selectedClass === "" || selectedFaculty === "") {
+                document.getElementById('error-message').textContent = "Please fill in all fields.";
+                return;
+            }
+
+            // Perform registration logic here (e.g., send data to server)
+            // If registration is successful, you can redirect the user or perform other actions
+
+            document.getElementById('error-message').textContent = "";
+            
+        }
+    </script>
+</body>
+</html>

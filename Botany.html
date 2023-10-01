@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botany</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Page title styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Gallery container styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Gallery item styles */
+        .gallery-item {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer; /* Cursor set to hand */
+        }
+
+        /* Image styles */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Topic title styles */
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Topic description styles */
+        .topic-description {
+            font-size: 16px;
+            padding: 10px;
+            color: #555;
+        }
+
+        /* Hover effect on gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Botany</h1>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <!-- Basic Bio-diversity -->
+        <div class="gallery-item">
+           <a href="bio_diversity.html">  <img src="bp/basic.jpg" alt="Basic Bio-diversity"></a>
+            <div class="topic-title">Basic Bio-diversity</div>
+            <div class="topic-description">Explore the diversity of life on Earth.</div>
+        </div>
+
+        <!-- Ecology, Cell Biology, and Genetics -->
+        <div class="gallery-item">
+           <a href="Ecology.html"> <img src="bp/cell.jpg" alt="Ecology, Cell Biology, and Genetics"> </a>
+            <div class="topic-title">Ecology, Cell Biology, and Genetics</div>
+            <div class="topic-description">Learn about ecology, cellular biology, and genetics.</div>
+        </div>
+
+        <!-- Plant Hormones and Their Regulation -->
+        <div class="gallery-item">
+           <a href="Anatomy.html"> <img src="bp/plants.jpg" alt="Plant Hormones and Their Regulation"> </a>
+            <div class="topic-title">Plant Hormones and Their Regulation</div>
+            <div class="topic-description">Discover the role of hormones in plant growth.</div>
+        </div>
+
+        <!-- Embryology and Bio-technology -->
+        <div class="gallery-item">
+           <a href="development.html"> <img src="bp/biotech.jpg" alt="Embryology and Bio-technology"> </a>
+            <div class="topic-title">Embryology and Bio-technology</div>
+            <div class="topic-description">Explore plant embryology and biotechnology applications.</div>
+        </div>
+    </div>
+</body>
+</html>

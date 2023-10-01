@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy and Physiology Gallery</title> <!-- Updated title -->
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Page title styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Gallery container styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Gallery item styles */
+        .gallery-item {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer; /* Cursor set to hand */
+        }
+
+        /* Image styles */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Topic title styles */
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Topic description styles */
+        .topic-description {
+            font-size: 16px;
+            padding: 10px;
+            color: #555;
+        }
+
+        /* Hover effect on gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Anatomy and Physiology Gallery</h1> <!-- Updated title -->
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <!-- Plant Anatomy -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Plant_Anatomy.jpg" alt="blank">
+            <div class="topic-title">Plant Anatomy</div>
+            <div class="topic-description">Explore the internal structure of plants.</div>
+        </div>
+
+        <!-- Plant Water Relation and Minerals -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Plant_Water_Relation_and_Minerals.jpg" alt="blank">
+            <div class="topic-title">Plant Water Relation and Minerals</div>
+            <div class="topic-description">Learn about how plants manage water and absorb minerals.</div>
+        </div>
+
+        <!-- Photosynthesis -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Photosynthesis.jpg" alt="blank">
+            <div class="topic-title">Photosynthesis</div>
+            <div class="topic-description">Detailed study of the process of photosynthesis in plants.</div>
+        </div>
+
+        <!-- Respiration -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Respiration.jpg" alt="blank">
+            <div class="topic-title">Respiration</div>
+            <div class="topic-description">Explore how plants respire and produce energy.</div>
+        </div>
+
+        <!-- Plant Hormones -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Plant_Hormones.jpg" alt="blank">
+            <div class="topic-title">Plant Hormones</div>
+            <div class="topic-description">Learn about hormones that regulate plant growth and development.</div>
+        </div>
+
+        <!-- Plant Nutrition -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Plant_Nutrition.jpg" alt="blank">
+            <div class="topic-title">Plant Nutrition</div>
+            <div class="topic-description">Detailed study of how plants obtain and use nutrients.</div>
+        </div>
+
+        <!-- Plant Movement -->
+        <div class="gallery-item">
+            <img src="anatomy_picture/Plant_Movement.jpg" alt="blank">
+            <div class="topic-title">Plant Movement</div>
+            <div class="topic-description">Explore various types of movement in plants.</div>
+        </div>
+    </div>
+</body>
+</html>

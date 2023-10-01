@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAT Gallery</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Page title styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Gallery container styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Gallery item styles */
+        .gallery-item {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer; /* Cursor set to hand */
+        }
+
+        /* Image styles */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Topic title styles */
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Topic description styles */
+        .topic-description {
+            font-size: 16px;
+            padding: 10px;
+            color: #555;
+        }
+
+        /* Hover effect on gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>MAT </h1>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <!-- Verbal Reasoning -->
+        <div class="gallery-item">
+            <img src="mp/verbal.webp" alt="Verbal Reasoning">
+            <div class="topic-title">Verbal Reasoning</div>
+            <div class="topic-description">Practice your verbal reasoning skills.</div>
+        </div>
+
+        <!-- Numerical Reasoning -->
+        <div class="gallery-item">
+            <img src="mp/numerical.jpg" alt="Numerical Reasoning">
+            <div class="topic-title">Numerical Reasoning</div>
+            <div class="topic-description">Sharpen your numerical reasoning abilities.</div>
+        </div>
+
+        <!-- Logical Sequencing -->
+        <div class="gallery-item">
+            <img src="mp/logical.webp" alt="Logical Sequencing">
+            <div class="topic-title">Logical Sequencing</div>
+            <div class="topic-description">Master logical sequencing problems.</div>
+        </div>
+
+        <!-- Spatial Relation/Abstract Reasoning -->
+        <div class="gallery-item">
+            <img src="mp/abstract.jpg" alt="Spatial Relation/Abstract Reasoning">
+            <div class="topic-title">Spatial Relation/Abstract Reasoning</div>
+            <div class="topic-description">Improve your spatial and abstract reasoning skills.</div>
+        </div>
+    </div>
+</body>
+</html>
