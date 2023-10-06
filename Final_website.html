@@ -82,22 +82,15 @@
             background-color: #0056b3; /* Darker blue on hover */
         }
 
-        /* Register link styles */
+        /* Updated styles for the message */
         .register-link {
-            font-size: 14px;
-            text-align: center;
-            color: #666; /* Gray text */
             margin-top: 20px;
         }
 
-        .register-link a {
-            color: #007bff; /* Blue link color */
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .register-link a:hover {
-            text-decoration: underline;
+        .register-link p {
+            font-weight: bold;
+            font-size: 18px;
+            color: #007bff; /* Blue color for the message */
         }
     </style>
 </head>
@@ -112,7 +105,7 @@
         </div>
         <button type="button" class="btn" onclick="login()">Login</button>
         <div class="register-link">
-            <p>Don't have an account? <a href="registration.html">Register here</a></p>
+            <p>Contact us at: <a href="mailto:acharya.sulav2061@gmail.com">acharya.sulav2061@gmail.com</a> for ID and Password</p>
         </div>
     </div>
 
@@ -123,10 +116,11 @@
             var enteredPassword = document.getElementById("password").value;
 
             // Define the allowed username and password
-            var allowedUsername = "acharya.sulav2061@gmail.com";
-            var allowedPassword = "Admin@098"; 
+            
             var allowedUsername = "boymaster957@gmail.com";
             var allowedPassword = "Admin@0987";
+            var allowedUsername = "admin";
+            var allowedPassword = "super&123";
 
             // Check if either the username or password is empty
             if (!enteredUsername || !enteredPassword) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Sidebar Page</title>
+    <title>Sidebar Page</title>
     <style>
         /* Global styles */
         body {
@@ -23,6 +23,7 @@
             left: 20px;
             z-index: 1; /* Ensure the hamburger is on top */
             transition: left 0.3s ease;
+            color: #333;
         }
 
         /* Sidebar container */
@@ -63,20 +64,6 @@
             transition: margin-left 0.3s ease;
         }
 
-        /* Header styles */
-        .header {
-            background-color: #fff;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Page title styles */
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
         /* Main content styles */
         .main-content {
             background-color: #fff;
@@ -94,28 +81,28 @@
 </head>
 <body>
     <!-- Hamburger menu symbol -->
-    <div class="hamburger">&#8801;</div>
+    <div class="hamburger">&#9776;</div>
 
     <!-- Sidebar container -->
     <div class="sidebar">
         <!-- Sidebar links -->
-        
         <a href="physics.html">Physics</a>
         <a href="chemistry.html">Chemistry</a>
-        <a href="Zoology.html">Zoology</a>
-        <a href="Botany.html">Botany</a>
-        <a href="Mat.html">MAT</a>
+        <a href="zoology.html">Zoology</a>
+        <a href="botany.html">Botany</a>
+        <a href="mat.html">MAT</a>
         <a href="notice.html">Notice</a>
-        
     </div>
 
     <!-- Content container -->
     <div class="content">
-        <iframe name="content" src="Homepage.html" onload="resizeIframe(this)"></iframe>
+        <div class="main-content">
+            <iframe name="content" src="Homepage.html" onload="resizeIframe(this)"></iframe>
+        </div>
     </div>
 
     <script>
-        // JavaScript to show/hide sidebar when hovering over the hamburger symbol
+        // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
         const sidebar = document.querySelector('.sidebar');
         const content = document.querySelector('.content');
@@ -124,7 +111,7 @@
 
         hamburger.addEventListener('click', () => {
             if (!isSidebarVisible) {
-                sidebar.style.left = '0px';
+                sidebar.style.left = '0';
                 content.style.marginLeft = '200px';
                 isSidebarVisible = true;
             } else {
