@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative; /* Add position for arrow */
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -84,49 +95,51 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <a class="left-arrow" href="sidebar.html">&#8592;</a> <!-- Left-facing arrow -->
         <h1>Physics Gallery</h1>
     </div>
 
- <!-- Gallery -->
- <div class="gallery">
-    <!-- Mechanics (Added id attribute) -->
-    <div class="gallery-item" id="mechanics">
-        <a href="p-gallery.html"><img src="pp/mechanics.jpg" alt="blank"></a>
-        <div class="topic-title">Mechanics</div>
-        <div class="topic-description">Explore the world of classical mechanics.</div>
-    </div>
+    <!-- Gallery -->
+    <div class="gallery">
+        <!-- Your gallery items go here -->
+        <!-- Mechanics (Added id attribute) -->
+        <div class="gallery-item" id="mechanics">
+            <a href="p-gallery.html"><img src="pp/mechanics.jpg" alt="blank"></a>
+            <div class="topic-title">Mechanics</div>
+            <div class="topic-description">Explore the world of classical mechanics.</div>
+        </div>
 
         <!-- Heat and Thermodynamics -->
         <div class="gallery-item">
-           <a href="heat_gallery.html"> <img src="pp/heat.jpg" alt="blank"></a>
+            <a href="heat_gallery.html"> <img src="pp/heat.jpg" alt="blank"></a>
             <div class="topic-title">Heat and Thermodynamics</div>
             <div class="topic-description">Learn about the laws of heat and thermodynamics.</div>
         </div>
 
         <!-- Current and Electricity -->
         <div class="gallery-item">
-           <a href="current_gallery.html"> <img src="pp/electricity.jpg" alt="blank"></a>
+            <a href="current_gallery.html"> <img src="pp/electricity.jpg" alt="blank"></a>
             <div class="topic-title">Current and Electricity</div>
             <div class="topic-description">Discover the principles of electrical circuits.</div>
         </div>
 
         <!-- Magnetism -->
         <div class="gallery-item">
-           <a href="magnetisim_gallery.html"> <img src="pp/magnetism.jpg" alt="blank"></a>
+            <a href="magnetisim_gallery.html"> <img src="pp/magnetism.jpg" alt="blank"></a>
             <div class="topic-title">Magnetism</div>
             <div class="topic-description">Explore the fascinating world of magnetism.</div>
         </div>
 
         <!-- Wave -->
         <div class="gallery-item">
-           <a href="wave_gallery.html"> <img src="pp/wave.jpg" alt="blank"> </a>
+            <a href="wave_gallery.html"> <img src="pp/wave.jpg" alt="blank"> </a>
             <div class="topic-title">Wave</div>
             <div class="topic-description">Dive into the study of waves and wave phenomena.</div>
         </div>
 
         <!-- Optics -->
         <div class="gallery-item">
-           <a href="optics_gallery.html"> <img src="pp/optics.jpg" alt="blank"> </a>
+            <a href="optics_gallery.html"> <img src="pp/optics.jpg" alt="blank"> </a>
             <div class="topic-title">Optics</div>
             <div class="topic-description">Learn about the behavior of light and optics.</div>
         </div>

@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative; /* Add position for arrow */
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -84,11 +95,13 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <a class="left-arrow" href="sidebar.html">&#8592;</a> <!-- Left-facing arrow -->
         <h1>Botany</h1>
     </div>
 
     <!-- Gallery -->
     <div class="gallery">
+        <!-- Your Botany gallery items go here -->
         <!-- Basic Bio-diversity -->
         <div class="gallery-item">
            <a href="bio_diversity.html">  <img src="bp/basic.jpg" alt="Basic Bio-diversity"></a>
