@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrance Master Login</title>
     <style>
@@ -20,15 +20,14 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: url('login page.jpg') no-repeat center;
+            background: url('login-page.jpg') no-repeat center;
             background-size: cover; /* Make sure the image covers the entire body */
         }
 
         /* Login form container */
         .wrapper {
             width: 400px;
-            background: url('photo.jpg') no-repeat center; /* Background image */
-            background-size: cover; /* Make sure the image covers the entire login box */
+            background: #f2f2f2; /* Light gray background */
             border: 1px solid #e0e0e0; /* Light gray border */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px 40px;
@@ -46,13 +45,17 @@
         .input-box {
             width: 100%;
             margin-bottom: 20px;
+            position: relative; /* Add this for positioning the eye icon */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 5px;
+            padding: 5px;
         }
 
         .input-box input {
             width: 100%;
             height: 45px;
-            background: #f2f2f2; /* Light gray background */
-            border: 1px solid #ccc; /* Light gray border */
+            background: #fff; /* White background */
+            border: none;
             border-radius: 5px;
             font-size: 16px;
             color: #333;
@@ -64,7 +67,39 @@
             color: #999; /* Light gray placeholder text */
         }
 
+        /* Style for the eye icon */
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        /* "Remember Me" checkbox styles */
+        .remember-me-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .remember-me-box label {
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-me-box input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
         /* Login button styles */
+        .btn-box {
+            width: 100%;
+            margin-top: 20px;
+        }
+
         .wrapper .btn {
             width: 100%;
             height: 45px;
@@ -82,15 +117,23 @@
             background-color: #0056b3; /* Darker blue on hover */
         }
 
-        /* Updated styles for the message */
-        .register-link {
+        /* Updated styles for the message and links */
+        .action-links {
             margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .register-link p {
-            font-weight: bold;
-            font-size: 18px;
-            color: #007bff; /* Blue color for the message */
+        .register-link,
+        .forgot-password-link {
+            text-align: center;
+        }
+
+        .register-link a,
+        .forgot-password-link a {
+            text-decoration: none;
+            color: #007bff; /* Blue color for the links */
         }
     </style>
 </head>
@@ -102,25 +145,49 @@
         </div>
         <div class="input-box">
             <input type="password" id="password" placeholder="Password">
+            <i class="eye-icon" id="togglePassword" onclick="togglePasswordVisibility()">👁️</i>
         </div>
-        <button type="button" class="btn" onclick="login()">Login</button>
-        <div class="register-link">
-            <p>Contact us at: <a href="mailto:acharya.sulav2061@gmail.com">acharya.sulav2061@gmail.com</a> for ID and Password</p>
+        <div class="remember-me-box">
+            <label>
+                <input type="checkbox" id="rememberMe"> Remember Me
+            </label>
+        </div>
+        <div class="btn-box">
+            <button type="button" class="btn" onclick="login()">Login</button>
+        </div>
+        <div class="action-links">
+            <div class="register-link">
+                <a href="registration.html">Register</a>
+            </div>
+            <div class="forgot-password-link">
+                <a href="forget_password.html">Forgot Password?</a>
+            </div>
         </div>
     </div>
 
     <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var togglePasswordButton = document.getElementById("togglePassword");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePasswordButton.textContent = "👁️"; // Change to an open eye icon
+            } else {
+                passwordInput.type = "password";
+                togglePasswordButton.textContent = "👁️"; // Change to a closed eye icon
+            }
+        }
+
         function login() {
             // Get the entered username and password
             var enteredUsername = document.getElementById("username").value;
             var enteredPassword = document.getElementById("password").value;
+            var rememberMe = document.getElementById("rememberMe").checked;
 
             // Define the allowed username and password
-            
-            var allowedUsername = "boymaster957@gmail.com";
-            var allowedPassword = "Admin@0987";
             var allowedUsername = "admin";
-            var allowedPassword = "super&123";
+            var allowedPassword = "admin01";
 
             // Check if either the username or password is empty
             if (!enteredUsername || !enteredPassword) {
@@ -136,6 +203,8 @@
                 // Display an error message (you can customize this)
                 alert("Invalid username or password. Please try again.");
             }
+
+            // If "Remember Me" is checked, you can store the user's credentials securely here.
         }
     </script>
 </body>

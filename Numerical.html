@@ -24,6 +24,18 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -31,7 +43,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
-            color: #333;
+            color: #fff;
         }
 
         /* Gallery container styles */
@@ -50,7 +62,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s ease-in-out;
-            cursor: pointer; /* Cursor set to hand */
+            cursor: pointer;
         }
 
         /* Image styles */
@@ -82,16 +94,21 @@
     </style>
 </head>
 <body>
+    <!-- Left Arrow in Top-Left Corner -->
+    <a class="left-arrow" href="Mat.html">&#8592;</a> <!-- Left-facing arrow -->
+
     <!-- Header -->
     <div class="header">
-        <h1>Numerical Reasoning Gallery</h1>
+        <a class="left-arrow" href="Mat.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1 class="title">Numerical Reasoning Gallery</h1>
     </div>
 
     <!-- Gallery -->
     <div class="gallery">
         <!-- Time & Work -->
         <div class="gallery-item">
-            <img src="numerical_photo/Time_work.jpg" alt="Time & Work">
+           <a href="https://www.youtube.com/live/FMiLkJH4i0U?si=mCKL9wR1omtj_8pH"> 
+             <img src="numerical_photo/Time_work.jpg" alt="Time & Work"> </a>
             <div class="topic-title">Time & Work</div>
             <div class="topic-description">Explore concepts related to time and work problems.</div>
         </div>

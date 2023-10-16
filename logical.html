@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -31,7 +42,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
-            color: #333;
+            color: #fff;
         }
 
         /* Gallery container styles */
@@ -82,9 +93,13 @@
     </style>
 </head>
 <body>
+    <!-- Left Arrow in Top-Left Corner -->
+    <a class="left-arrow" href="Mat.html">&#8592;</a> <!-- Left-facing arrow -->
+
     <!-- Header -->
     <div class="header">
-        <h1>Logical Sequence Gallery</h1>
+        <a class="left-arrow" href="Mat.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1 class="title">Logical Sequence Gallery</h1>
     </div>
 
     <!-- Gallery -->
@@ -114,7 +129,7 @@
         <div class="gallery-item">
             <img src="logical_photo/analogy.jpg" alt="Analogy">
             <div class="topic-title">Analogy</div>
-            <div class="topic-description">Explore analogies and relationships in logical reasoning.</div>
+            <div class "topic-description">Explore analogies and relationships in logical reasoning.</div>
         </div>
 
         <!-- Venn Diagram -->

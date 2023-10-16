@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -84,6 +95,7 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <a class="left-arrow" href="Zoology.html">&#8592;</a> <!-- Left-facing arrow -->
         <h1>Biology of the Following Gallery</h1>
     </div>
 
@@ -96,28 +108,26 @@
             <div class="topic-description">Detailed lecture about Plasmodium</div>
         </div>
 
-              <!--Paramecium  -->
-              <div class="gallery-item">
-                <img src="bof_photo/paramecium.jpg" alt="blank">
-                <div class="topic-title">Paramecium</div>
-                <div class="topic-description">Detailed lecture about Paramecium </div>
-            </div>
-
-                 <!--Earthworm  -->
+        <!-- Paramecium -->
         <div class="gallery-item">
-          <img src="bof_photo/Earthworm.jpg" alt="blank">
-          <div class="topic-title">Earthworm</div>
-          <div class="topic-description">Detailed lecture about Earthworm </div>
-      </div>
+            <img src="bof_photo/paramecium.jpg" alt="blank">
+            <div class="topic-title">Paramecium</div>
+            <div class "topic-description">Detailed lecture about Paramecium</div>
+        </div>
 
-                 <!-- Frog -->
+        <!-- Earthworm -->
         <div class="gallery-item">
-          <img src="bof_photo/Frog.jpg" alt="blank">
-          <div class="topic-title">Frog</div>
-          <div class="topic-description">Detailed lecture about Frog </div>
-      </div>
-          
-        
+            <img src="bof_photo/Earthworm.jpg" alt="blank">
+            <div class="topic-title">Earthworm</div>
+            <div class="topic-description">Detailed lecture about Earthworm</div>
+        </div>
+
+        <!-- Frog -->
+        <div class="gallery-item">
+            <img src="bof_photo/Frog.jpg" alt="blank">
+            <div class="topic-title">Frog</div>
+            <div class="topic-description">Detailed lecture about Frog</div>
+        </div>
     </div>
 </body>
 </html>

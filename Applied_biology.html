@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -50,7 +61,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s ease-in-out;
-            cursor: pointer; /* Cursor set to hand */
+            cursor: pointer;
         }
 
         /* Image styles */
@@ -84,6 +95,7 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <a class="left-arrow" href="Zoology.html">&#8592;</a> <!-- Left-facing arrow -->
         <h1>Applied Biology Gallery</h1>
     </div>
 

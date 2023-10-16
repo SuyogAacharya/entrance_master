@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inorganic Chemistry</title> <!-- Updated title -->
+    <title>Inorganic Chemistry</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -31,7 +42,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
-            color: #333;
+            color: #fff;
         }
 
         /* Gallery container styles */
@@ -50,7 +61,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s ease-in-out;
-            cursor: pointer; /* Cursor set to hand */
+            cursor: pointer;
         }
 
         /* Image styles */
@@ -82,9 +93,13 @@
     </style>
 </head>
 <body>
+    <!-- Left Arrow in Top-Left Corner -->
+    <a class="left-arrow" href="chemistry.html">&#8592;</a> <!-- Left-facing arrow -->
+    
     <!-- Header -->
     <div class="header">
-        <h1>Inorganic Chemistry</h1> <!-- Updated title -->
+        <a class="left-arrow" href="chemistry.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1 class="title">Inorganic Chemistry</h1>
     </div>
 
     <!-- Gallery -->
@@ -114,7 +129,7 @@
         <div class="gallery-item">
             <img src="inorganic_picture/carbon family.jpg" alt="blank">
             <div class="topic-title">Carbon Family</div>
-            <div class="topic-description">Detailed lecture about the Carbon Family</div>
+            <div class "topic-description">Detailed lecture about the Carbon Family</div>
         </div>
 
         <!-- Nitrogen -->
@@ -158,12 +173,13 @@
             <div class="topic-title">Alkali Metals</div>
             <div class="topic-description">Detailed lecture about Alkali Metals</div>
         </div>
-         <!-- co-ordinate chemistry -->
+
+        <!-- co-ordinate chemistry -->
          <div class="gallery-item">
-          <img src="inorganic_picture/co-ordinate chemistry.jpg" alt="blank">
-          <div class="topic-title">co-ordinate chemistry</div>
-          <div class="topic-description">Detailed lecture about co-ordinate chemistry/div>
-      </div>
+            <img src="inorganic_picture/co-ordinate chemistry.jpg" alt="blank">
+            <div class="topic-title">co-ordinate chemistry</div>
+            <div class="topic-description">Detailed lecture about co-ordinate chemistry</div>
+        </div>
     </div>
 </body>
 </html>

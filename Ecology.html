@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botany Gallery</title> <!-- Updated title -->
+    <title>Botany Gallery</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -50,7 +61,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s ease-in-out;
-            cursor: pointer; /* Cursor set to hand */
+            cursor: pointer;
         }
 
         /* Image styles */
@@ -84,7 +95,8 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <h1>Botany Gallery</h1> <!-- Updated title -->
+        <a class="left-arrow" href="Botany.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1>Botany Gallery</h1>
     </div>
 
     <!-- Gallery -->

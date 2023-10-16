@@ -24,6 +24,17 @@
             color: #fff;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Page title styles */
@@ -31,7 +42,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
-            color: #333;
+            color: #fff;
         }
 
         /* Gallery container styles */
@@ -82,9 +93,13 @@
     </style>
 </head>
 <body>
+    <!-- Left Arrow in Top-Left Corner -->
+    <a class="left-arrow" href="Mat.html">&#8592;</a> <!-- Left-facing arrow -->
+
     <!-- Header -->
     <div class="header">
-        <h1>Spatial Gallery</h1>
+        <a class="left-arrow" href="Mat.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1 class="title">Spatial Gallery</h1>
     </div>
 
     <!-- Gallery -->
@@ -112,8 +127,9 @@
 
         <!-- Water Image and Mirror Image -->
         <div class="gallery-item">
-            <img src="spatial_photo/water_mirror_image.jpg" alt="Water Image and Mirror Image">
-            <div class="topic-title">Water Image and Mirror Image</div>
+          <a href="https://www.youtube.com/live/Q6Qp7ztNPZo?si=2LzPYi1rb1O2sMLd"> 
+             <img src="spatial_photo/water_mirror_image.jpg" alt="Water Image and Mirror Image"> </a> 
+              <div class="topic-title">Water Image and Mirror Image</div>
             <div class="topic-description">Understand and solve problems involving water images and mirror images.</div>
         </div>
 

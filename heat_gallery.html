@@ -13,14 +13,25 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #0abe0a;
             color: #fff;
             text-align: center;
             padding: 20px;
+            position: relative;
         }
 
         h1 {
             margin: 0;
+        }
+
+        /* Left Arrow Link Styles */
+        .left-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         .gallery {
@@ -50,31 +61,12 @@
         .gallery-item img {
             max-width: 100%;
         }
-
-        /* Left-facing arrow styles */
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
-    <!-- Left-facing arrow link -->
-    <a href="physics.html" class="back-button">&larr; Physics</a>
-
     <header>
+        <!-- Left Arrow Link -->
+        <a class="left-arrow" href="physics.html">&#8592;</a>
         <h1>Heat & Thermodynamics Gallery</h1>
     </header>
 
@@ -92,7 +84,7 @@
             <p>Description of Thermal Expansion goes here.</p>
         </div>
 
-        <div class="gallery-item">
+        <div class "gallery-item">
             <img src="heat_pic/calirometry.jpg" alt="Calorimetry">
             <h2>Calorimetry</h2>
             <p>Description of Calorimetry goes here.</p>

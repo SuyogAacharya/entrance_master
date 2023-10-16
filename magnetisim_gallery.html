@@ -8,22 +8,34 @@
         /* Reset default styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f3f3f3;
             margin: 0;
             padding: 0;
         }
 
         /* Header styling */
         header {
-            background-color: #333;
+            background-color: #0abe0a;
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            position: relative;
         }
 
         /* Main heading styling */
         h1 {
             margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Left Arrow Link Styles */
+        .left-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Gallery container styling */
@@ -38,13 +50,14 @@
         /* Gallery item styling */
         .gallery-item {
             background-color: #fff;
+            border: 1px solid #e0e0e0;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 300px;
             text-align: center;
-            cursor: pointer; /* Add cursor style */
-            transition: transform 0.2s ease-in-out; /* Add transition for smoother effect */
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
         }
 
         /* Scale up on hover */
@@ -56,7 +69,7 @@
         .gallery-item img {
             max-width: 100%;
             height: auto;
-            max-height: 200px; /* Set a maximum height to make boxes uniform */
+            max-height: 200px;
         }
 
         /* Gallery item heading styling */
@@ -64,17 +77,21 @@
             font-size: 1.5rem;
             padding: 10px;
             margin: 0;
+            color: #333;
         }
 
         /* Gallery item description styling */
         .gallery-item p {
             padding: 10px;
             margin: 0;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
+         <!-- Left Arrow Link -->
+         <a class="left-arrow" href="physics.html">&#8592;</a>
         <h1>Magnetism Gallery</h1>
     </header>
     <div class="gallery">
@@ -82,28 +99,28 @@
         <div class="gallery-item">
             <img src="magnetic_photo/magnetisim.jpg" alt="Magnetism">
             <h2>Magnetism</h2>
-            <p>Description of magnetism goes here.</p>
+            <p>A detailed exploration of the fascinating world of magnetism.</p>
         </div>
 
         <!-- Gallery Item 2: Magnetic Effect of Current -->
         <div class="gallery-item">
             <img src="magnetic_photo/magnetic effect of current.jpg" alt="Magnetic Effect of Current">
             <h2>Magnetic Effect of Current</h2>
-            <p>Description of the magnetic effect of current goes here.</p>
+            <p>Discover how electric currents create magnetic fields and their practical applications.</p>
         </div>
 
         <!-- Gallery Item 3: Electromagnetic Induction -->
         <div class="gallery-item">
             <img src="magnetic_photo/electro magnetic induction.jpg" alt="Electromagnetic Induction">
             <h2>Electromagnetic Induction</h2>
-            <p>Description of electromagnetic induction goes here.</p>
+            <p>Learn about the generation of electric currents through electromagnetic induction.</p>
         </div>
 
         <!-- Gallery Item 4: Alternating Current -->
         <div class="gallery-item">
             <img src="magnetic_photo/Alternating current.jpg" alt="Alternating Current">
             <h2>Alternating Current</h2>
-            <p>Description of alternating current goes here.</p>
+            <p>Explore the concept of alternating current and its significance in electrical engineering.</p>
         </div>
     </div>
 </body>
