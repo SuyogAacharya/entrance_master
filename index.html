@@ -17,25 +17,26 @@
             font-family: "Poppins", sans-serif;
             box-sizing: border-box;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
             background: url('login-page.jpg') no-repeat center;
-            background-size: cover; /* Make sure the image covers the entire body */
+            background-size: cover;
+            min-height: 100vh;
         }
 
-        /* Login form container */
-        .wrapper {
+        /* Container for the login form */
+        .login-container {
             width: 400px;
-            background: #f2f2f2; /* Light gray background */
-            border: 1px solid #e0e0e0; /* Light gray border */
+            background: #f2f2f2;
+            border: 1px solid #e0e0e0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px 40px;
             border-radius: 10px;
             text-align: center;
+            margin-top: 20px;
         }
 
-        .wrapper h1 {
+        .login-container h1 {
             font-size: 28px;
             margin-bottom: 20px;
             color: #333;
@@ -45,16 +46,16 @@
         .input-box {
             width: 100%;
             margin-bottom: 20px;
-            position: relative; /* Add this for positioning the eye icon */
-            border: 1px solid #ddd; /* Light gray border */
+            position: relative;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            padding: 5px;
+            padding: 10px;
         }
 
         .input-box input {
             width: 100%;
             height: 45px;
-            background: #fff; /* White background */
+            background: #f9f9f9;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -64,7 +65,7 @@
         }
 
         .input-box input::placeholder {
-            color: #999; /* Light gray placeholder text */
+            color: #999;
         }
 
         /* Style for the eye icon */
@@ -100,21 +101,21 @@
             margin-top: 20px;
         }
 
-        .wrapper .btn {
+        .login-container .btn {
             width: 100%;
             height: 45px;
-            background: #007bff; /* Blue button */
+            background: #007bff;
             border: none;
             border-radius: 5px;
             font-size: 16px;
-            color: #fff; /* White text */
-            font-weight: 600;
+            color: #fff;
+            font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .btn:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
         }
 
         /* Updated styles for the message and links */
@@ -125,20 +126,29 @@
             align-items: center;
         }
 
-        .register-link,
-        .forgot-password-link {
+        .youtube-link,
+        .free-resources-link {
             text-align: center;
         }
 
-        .register-link a,
-        .forgot-password-link a {
+        .youtube-link a,
+        .free-resources-link a {
             text-decoration: none;
-            color: #007bff; /* Blue color for the links */
+            color: #007bff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="action-links">
+        <div class="youtube-link">
+            <a href="https://www.youtube.com">Youtube</a>
+        </div>
+        <div class="free-resources-link">
+            <a href="https://www.freeresources.com">Free Resources</a>
+        </div>
+    </div>
+    <div class="login-container">
         <h1>Entrance Master Login</h1>
         <div class="input-box">
             <input type="text" id="username" placeholder="Username">
@@ -155,14 +165,6 @@
         <div class="btn-box">
             <button type="button" class="btn" onclick="login()">Login</button>
         </div>
-        <div class="action-links">
-            <div class="register-link">
-                <a href="registration.html">Register</a>
-            </div>
-            <div class="forgot-password-link">
-                <a href="forget_password.html">Forgot Password?</a>
-            </div>
-        </div>
     </div>
 
     <script>
@@ -172,39 +174,31 @@
 
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                togglePasswordButton.textContent = "👁️"; // Change to an open eye icon
+                togglePasswordButton.textContent = "👁️";
             } else {
                 passwordInput.type = "password";
-                togglePasswordButton.textContent = "👁️"; // Change to a closed eye icon
+                togglePasswordButton.textContent = "👁️";
             }
         }
 
         function login() {
-            // Get the entered username and password
             var enteredUsername = document.getElementById("username").value;
             var enteredPassword = document.getElementById("password").value;
             var rememberMe = document.getElementById("rememberMe").checked;
 
-            // Define the allowed username and password
             var allowedUsername = "admin";
             var allowedPassword = "admin01";
 
-            // Check if either the username or password is empty
             if (!enteredUsername || !enteredPassword) {
                 alert("Please enter both a username and password.");
                 return;
             }
 
-            // Check if the entered credentials match the allowed ones
             if (enteredUsername === allowedUsername && enteredPassword === allowedPassword) {
-                // Redirect to the specified login page
                 window.location.href = "sidebar.html";
             } else {
-                // Display an error message (you can customize this)
                 alert("Invalid username or password. Please try again.");
             }
-
-            // If "Remember Me" is checked, i can store the user's credentials securely here.
         }
     </script>
 </body>
