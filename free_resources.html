@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free-resources</title>
+    <title>Free Resources</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -47,15 +47,16 @@
 
         /* Gallery container styles */
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+            padding: 20px;
         }
 
         /* Gallery item styles */
         .gallery-item {
-            width: 300px;
-            margin: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -100,35 +101,35 @@
     </div>
 
     <!-- Gallery -->
-   
+    <div class="gallery">
+        <!-- Human Evolution -->
+        <div class="gallery-item" data-video-url="https://www.youtube.com/embed/lOQeRAz7_oo?rel=0">
+            <img src="free-resources photo/Human evolution.jpg" alt="Human Evolution">
+            <div class="topic-title">Human Evolution</div>
+            <div class="topic-description">Explore the fascinating journey of human evolution.</div>
+        </div>
 
-       <!-- Human Evolution -->
-<div class="gallery-item" data-video-url="https://www.youtube.com/embed/lOQeRAz7_oo?rel=0">
-    <img src="free-resources photo/Human evolution.jpg" alt="Human Evolution">
-    <div class="topic-title">Human Evolution</div>
-    <div class="topic-description">One-shot video of human evolution</div>
-</div>
+        <!-- Mechanics -->
+        <div class="gallery-item" data-video-url="https://www.youtube.com/embed/7mBW3Ot4TPk?rel=0">
+            <img src="free-resources photo/mechanics.jpg" alt="Mechanics">
+            <div class="topic-title">Mechanics</div>
+            <div class="topic-description">Dive into the world of mechanics with this comprehensive video.</div>
+        </div>
 
-<!-- Mechanics -->
-<div class="gallery-item" data-video-url="https://www.youtube.com/embed/7mBW3Ot4TPk?rel=0">
-    <img src="free-resources photo/mechanics.jpg" alt="Mechanics">
-    <div class="topic-title">Mechanics</div>
-    <div class="topic-description">One-shot video of Mechanics</div>
-</div>
+        <!-- Heat and Thermodynamics -->
+        <div class="gallery-item" data-video-url="https://www.youtube.com/embed/0KcdfY6l3xE?rel=0">
+            <img src="free-resources photo/heat and thermo.jpg" alt="Heat and Thermodynamics">
+            <div class="topic-title">Heat and Thermodynamics</div>
+            <div class="topic-description">Learn the principles of heat and thermodynamics in this in-depth video.</div>
+        </div>
 
-<!-- Heat and Thermodynamics -->
-<div class="gallery-item" data-video-url="https://www.youtube.com/embed/0KcdfY6l3xE?rel=0">
-    <img src="free-resources photo/heat and thermo.jpg" alt="Heat and Thermodynamics">
-    <div class="topic-title">Heat and Thermodynamics</div>
-    <div class="topic-description">One-shot video of Heat and Thermodynamics</div>
-</div>
-
-<!-- Current and Electricity -->
-<div class="gallery-item" data-video-url="https://www.youtube.com/embed/ogiOyQ6U5Xs?rel=0">
-    <img src="free-resources photo/current and electricity.jpg" alt="Current and Electricity">
-    <div class="topic-title">Current and Electricity</div>
-    <div class="topic-description">One-shot video of Current and Electricity</div>
-</div>
+        <!-- Current and Electricity -->
+        <div class="gallery-item" data-video-url="https://www.youtube.com/embed/ogiOyQ6U5Xs?rel=0">
+            <img src="free-resources photo/current and electricity.jpg" alt="Current and Electricity">
+            <div class="topic-title">Current and Electricity</div>
+            <div class "topic-description">Discover the world of current and electricity with this educational video.</div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
