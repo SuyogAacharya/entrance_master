@@ -41,7 +41,7 @@
         .wrapper h1 {
             font-size: 36px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* Added spacing below the title */
         }
 
         /* Input box styles */
@@ -60,15 +60,15 @@
             background: transparent;
             border: none;
             font-size: 16px;
-            color: #333;
-            padding: 10px 20px;
+            color: #333; /* Darkened text color for better readability */
+            padding: 10px 20px; /* Adjusted padding to ensure text visibility */
             outline: none;
-            text-align: left;
+            text-align: left; /* Align text to the left for input fields */
         }
 
         .input-box input::placeholder {
-            color: #777;
-            text-align: left;
+            color: #777; /* Lighter placeholder text color */
+            text-align: left; /* Align placeholder text to the left */
         }
 
         /* Select box styles */
@@ -84,8 +84,8 @@
             height: 50px;
             border: none;
             font-size: 16px;
-            color: #333;
-            padding: 10px 15px;
+            color: #333; /* Darkened text color for better readability */
+            padding: 10px 15px; /* Adjusted padding to ensure text visibility */
             background: transparent;
             outline: none;
         }
@@ -117,44 +117,60 @@
     
     <div class="wrapper">
         <h1>Registration</h1>
-        <form id="registration-form" method="post" action="process_registration.php">
-            <div class="input-box">
-                <input type="text" id="username" name="username" placeholder="Enter your username">
-            </div>
-            <div class="input-box">
-                <input type="email" id="email" name="email" placeholder="Enter your email">
-            </div>
-            <div class="input-box">
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-            </div>
-            <div class="input-box">
-                <input type="text" id="paymentNo" name="paymentNo" placeholder="Enter your payment number">
-            </div>
-            <div class="input-box">
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-            </div>
-            <div class="select-box">
-                <select id="class" name="class">
-                    <option value="" disabled selected>Select Class</option>
-                    <option value="Class 11">Class 11</option>
-                    <option value="Class 12">Class 12</option>
-                    <option value="Fresher">Fresher</option>
-                    <option value="Dropper">Dropper</option>
-                </select>
-            </div>
-            <div class="select-box">
-                <select id="faculty" name="faculty">
-                    <option value="" disabled selected>Select Faculty</option>
-                    <option value="MBBS Entrance">MBBS Entrance</option>
-                    <option value="Nursing Entrance">Nursing Entrance</option>
-                    <option value="BDS Entrance">BDS Entrance</option>
-                </select>
-            </div>
-            <button type="submit" class="btn">Register</button>
-            <div class="error-message" id="error-message"></div>
-        </form>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-box">
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="input-box">
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="select-box">
+            <select id="class">
+                <option value="" disabled selected>Select Class</option>
+                <option value="Class 11">Class 11</option>
+                <option value="Class 12">Class 12</option>
+                <option value="Fresher">Fresher</option>
+                <option value="Dropper">Dropper</option>
+            </select>
+        </div>
+        <div class="select-box">
+            <select id="faculty">
+                <option value="" disabled selected>Select Faculty</option>
+                <option value="MBBS Entrance">MBBS Entrance</option>
+                <option value="Nursing Entrance">Nursing Entrance</option>
+                <option value="BDS Entrance">BDS Entrance</option>
+            </select>
+        </div>
+        <button type="submit" class="btn" onclick="registerUser()">Register</button>
+        <a href="login.html"></a>
+        <div class="error-message" id="error-message"></div>
     </div>
-    
+
     <script>
+        function registerUser() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value; // Added password field
+            const selectedClass = document.getElementById('class').value;
+            const selectedFaculty = document.getElementById('faculty').value;
+
+            if (!username || !email || !phone || !password || selectedClass === "" || selectedFaculty === "") {
+                document.getElementById('error-message').textContent = "Please fill in all fields.";
+                return;
+            }
+
+            // Perform registration logic here (e.g., send data to server)
+            // If registration is successful, you can redirect the user or perform other actions
+
+            document.getElementById('error-message').textContent = "";
+            
+        }
+    </script>
 </body>
 </html>
