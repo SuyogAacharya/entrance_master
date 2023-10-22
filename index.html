@@ -120,6 +120,10 @@
             align-items: center;
         }
 
+        .forgot-password-link {
+            text-align: center;
+        }
+
         .youtube-link,
         .free-resources-link {
             text-align: center;
@@ -130,6 +134,10 @@
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
+        }
+
+        .register-link {
+            text-align: center;
         }
     </style>
 </head>
@@ -150,6 +158,16 @@
         <div class="input-box">
             <input type="password" id="password" placeholder="Password">
             <i class="eye-icon" id="togglePassword" onclick="togglePasswordVisibility()">👁️</i>
+        </div>
+        <div class="action-links">
+            <!-- Add a "Forgot Password" link inside the login box -->
+            <div class="forgot-password-link">
+                <a href="forget_password.html">Forgot Password?</a>
+            </div>
+            <!-- Add a "Register" link inside the login box -->
+            <div class="register-link">
+                <a href="registration.html">Register</a>
+            </div>
         </div>
         <div class="remember-me-box">
             <label>
@@ -182,8 +200,6 @@
 
             var allowedUsername = "admin";
             var allowedPassword = "admin01";
-
-            
 
             if (!enteredUsername || !enteredPassword) {
                 alert("Please enter both a username and password.");

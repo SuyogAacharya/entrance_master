@@ -41,7 +41,7 @@
         .wrapper h1 {
             font-size: 36px;
             text-align: center;
-            margin-bottom: 20px; /* Added spacing below the title */
+            margin-bottom: 20px;
         }
 
         /* Input box styles */
@@ -60,15 +60,15 @@
             background: transparent;
             border: none;
             font-size: 16px;
-            color: #333; /* Darkened text color for better readability */
-            padding: 10px 20px; /* Adjusted padding to ensure text visibility */
+            color: #333;
+            padding: 10px 20px;
             outline: none;
-            text-align: left; /* Align text to the left for input fields */
+            text-align: left;
         }
 
         .input-box input::placeholder {
-            color: #777; /* Lighter placeholder text color */
-            text-align: left; /* Align placeholder text to the left */
+            color: #777;
+            text-align: left;
         }
 
         /* Select box styles */
@@ -84,8 +84,8 @@
             height: 50px;
             border: none;
             font-size: 16px;
-            color: #333; /* Darkened text color for better readability */
-            padding: 10px 15px; /* Adjusted padding to ensure text visibility */
+            color: #333;
+            padding: 10px 15px;
             background: transparent;
             outline: none;
         }
@@ -127,6 +127,9 @@
             <input type="tel" id="phone" placeholder="Enter your phone number">
         </div>
         <div class="input-box">
+            <input type="text" id="paymentNo" placeholder="Enter your payment number">
+        </div>
+        <div class="input-box">
             <input type="password" id="password" placeholder="Enter your password">
         </div>
         <div class="select-box">
@@ -147,7 +150,6 @@
             </select>
         </div>
         <button type="submit" class="btn" onclick="registerUser()">Register</button>
-        <a href="login.html"></a>
         <div class="error-message" id="error-message"></div>
     </div>
 
@@ -156,11 +158,12 @@
             const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
-            const password = document.getElementById('password').value; // Added password field
+            const paymentNo = document.getElementById('paymentNo').value;
+            const password = document.getElementById('password').value;
             const selectedClass = document.getElementById('class').value;
             const selectedFaculty = document.getElementById('faculty').value;
 
-            if (!username || !email || !phone || !password || selectedClass === "" || selectedFaculty === "") {
+            if (!username || !email || !phone || !paymentNo || !password || selectedClass === "" || selectedFaculty === "") {
                 document.getElementById('error-message').textContent = "Please fill in all fields.";
                 return;
             }
@@ -169,7 +172,6 @@
             // If registration is successful, you can redirect the user or perform other actions
 
             document.getElementById('error-message').textContent = "";
-            
         }
     </script>
 </body>
