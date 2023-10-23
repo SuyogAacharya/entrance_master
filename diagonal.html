@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Box</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .diagonal-box {
+            width: 300px;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 75px solid #0074D9;
+            position: relative;
+            text-align: center;
+            background-color: #0074D9;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #0074D9; /* Slightly lighter shade on hover */
+        }
+
+        .diagonal-box p {
+            color: #fff;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .danger-symbol {
+            color: #ff4f4f; /* Red color for danger symbol */
+            font-size: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back-button" href="index.html">Back</a>
+    <div class="diagonal-box">
+        <p><span class="danger-symbol">!</span>Please login to continue</p>
+    </div>
+</body>
+</html>
