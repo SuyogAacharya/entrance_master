@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botany Gallery</title>
+    <title>Notes</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -14,7 +14,7 @@
         /* Global styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f0f0f0;
             text-align: center;
         }
 
@@ -23,7 +23,7 @@
             background-color: #0abe0a;
             color: #fff;
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
         }
 
@@ -52,27 +52,66 @@
             justify-content: center;
         }
 
+        /* Gallery item styles */
+        .gallery-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
         /* Hover effect on gallery items */
         .gallery-item:hover {
             transform: scale(1.05);
+        }
+
+        /* PDF link styles */
+        .pdf-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <div class="header">
-        <a class="left-arrow" href="sidebar.html">&#8592;</a> <!-- Left-facing arrow -->
-        <h1>Notes</h1>
+        <a class="left-arrow" href="sidebar.html">&#8592;</a>
+        <h1 class="title">Notes</h1>
     </div>
 
     <!-- Gallery -->
     <div class="gallery">
-        <!-- Add a PDF file -->
-        <div class="gallery-item">
-            <object data="zoology-01.pdf" type="application/pdf" width="300" height="400">
-                <p>It appears you don't have a PDF plugin for this browser. You can <a href="zoology-01.pdf">click here to download the PDF file.</a></p>
+        <!-- Add only the Zoology PDF with a click event to open it in a new tab/window -->
+        <div class="gallery-item" onclick="openPDF()">
+            <object data="Notes.pdf/zoology-01.pdf" type="application/pdf" width="1200" height="1000">
+                <p>Click to open the Zoology PDF in a new tab/window.</p>
             </object>
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2023 Notes
+    </div>
+
+    <script>
+        // Function to open the Zoology PDF in a new tab/window
+        function openPDF() {
+            window.open("zoology-01.pdf", "_blank");
+        }
+    </script>
 </body>
 </html>
