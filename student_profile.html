@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 30px;
+            margin-top: 30px;
+            position: relative;
+        }
+        .back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #3498db;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .profile-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        .profile-class {
+            font-size: 20px;
+            color: #555;
+        }
+        .profile-details {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .class-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .class-list-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back-link" href="sidebar.html">&#8592;</a>
+    <div class="profile-container">
+        <img class="profile-photo" src="student_photo.jpg" alt="Student Photo">
+        <h1 class="profile-name">John Doe</h1>
+        <p class="profile-class">Class: 10th Grade</p>
+        <div class="profile-details">
+            <p><strong>Enrolled Classes:</strong></p>
+            <ul class="class-list">
+                <li class="class-list-item">Mathematics</li>
+                <li class="class-list-item">Science</li>
+                <li class="class-list-item">History</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
