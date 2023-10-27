@@ -45,15 +45,14 @@
             color: #333;
         }
 
-        /* Gallery container styles */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        /* PDF list styles */
+        .pdf-list {
+            list-style: decimal; /* Use decimal numbering for the list */
+            padding: 0;
         }
 
-        /* Gallery item styles */
-        .gallery-item {
+        /* PDF list item styles */
+        .pdf-list-item {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -65,8 +64,8 @@
             text-align: center;
         }
 
-        /* Hover effect on gallery items */
-        .gallery-item:hover {
+        /* Hover effect on PDF list items */
+        .pdf-list-item:hover {
             transform: scale(1.05);
         }
 
@@ -92,15 +91,14 @@
         <h1 class="title">Notes</h1>
     </div>
 
-    <!-- Gallery -->
-    <div class="gallery">
-        <!-- Add only the Zoology PDF with a click event to open it in a new tab/window -->
-        <div class="gallery-item" onclick="openPDF()">
-            <object data="Notes.pdf/zoology-01.pdf" type="application/pdf" width="1200" height="1000">
-                <p>Click to open the Zoology PDF in a new tab/window.</p>
-            </object>
-        </div>
-    </div>
+    <!-- PDF List -->
+    <ol class="pdf-list"> <!-- Use <ol> for ordered list -->
+        <!-- Add PDF items with a click event to open them in a new tab/window -->
+        <li class="pdf-list-item" onclick="openPDF('Notes.pdf/zoology-01.pdf')">
+            <a class="pdf-link" href="Notes.pdf/zoology-01.pdf" target="_blank">1. Zoology PDF</a>
+        </li>
+        <!-- Add more PDF items here with incrementing numbers -->
+    </ol>
 
     <!-- Footer -->
     <div class="footer">
@@ -108,9 +106,9 @@
     </div>
 
     <script>
-        // Function to open the Zoology PDF in a new tab/window
-        function openPDF() {
-            window.open("zoology-01.pdf", "_blank");
+        // Function to open a PDF in a new tab/window
+        function openPDF(pdfUrl) {
+            window.open(pdfUrl, "_blank");
         }
     </script>
 </body>
