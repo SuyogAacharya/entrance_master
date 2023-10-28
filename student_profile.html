@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #471708;
             margin: 0;
             padding: 0;
         }
@@ -19,13 +19,9 @@
             margin-top: 30px;
             position: relative;
         }
-        .back-link {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 20px;
-            text-decoration: none;
-            color: #3498db;
+        .profile-photo-container {
+            text-align: center;
+            position: relative;
         }
         .profile-photo {
             width: 150px;
@@ -35,6 +31,23 @@
             border: 5px solid #3498db;
             margin: 0 auto 20px;
             display: block;
+            transition: opacity 0.3s;
+        }
+        .profile-photo-container:hover .upload-button {
+            opacity: 1;
+        }
+        .upload-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
         }
         .profile-name {
             font-size: 36px;
@@ -57,11 +70,18 @@
         .class-list-item {
             margin-bottom: 10px;
         }
+        .photo-upload-input {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="profile-container">
-        <img class="profile-photo" src="student_photo.jpg" alt="Student Photo">
+        <div class="profile-photo-container">
+            <img class="profile-photo" src="default_photo.jpg" alt="Student Photo">
+            <label for="photo" class="upload-button">Upload Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" class="photo-upload-input">
+        </div>
         <h1 class="profile-name">John Doe</h1>
         <p class="profile-class">Class: 10th Grade</p>
         <div class="profile-details">
@@ -73,5 +93,32 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        // Simulate fetching user data from a server
+        setTimeout(() => {
+            const userData = {
+                name: "John Doe",
+                className: "10th Grade",
+                enrolledClasses: ["Mathematics", "Science", "History"]
+            };
+            
+            // Update the profile information with the fetched data
+            document.querySelector(".profile-name").textContent = userData.name;
+            document.querySelector(".profile-class").textContent = "Class: " + userData.className;
+
+            // Clear the enrolled classes list
+            const classList = document.querySelector(".class-list");
+            classList.innerHTML = "";
+
+            // Populate the enrolled classes list
+            userData.enrolledClasses.forEach(className => {
+                const listItem = document.createElement("li");
+                listItem.className = "class-list-item";
+                listItem.textContent = className;
+                classList.appendChild(listItem);
+            });
+        }, 1000); // Simulating a delay to fetch data (1 second)
+    </script>
 </body>
 </html>
