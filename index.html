@@ -220,7 +220,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Courses</title>
+    <title>Our Services</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -315,6 +315,7 @@
             transform: scale(0);
             transform-origin: 0% 100%;
             transition: transform 0.3s, opacity 0.3s;
+            cursor: pointer;
         }
 
         /* Show diagonal overlay on hover */
@@ -327,16 +328,16 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <h1>Our Courses</h1>
+        <h1>Our Services</h1>
     </div>
 
     <!-- Gallery -->
     <div class="gallery">
         <!-- Gallery Items with Overlays -->
-        <!--  MBBS Entrance -->
+        <!-- MBBS Entrance -->
         <div class="gallery-item">
             <img src="course_picture/mbbs_entrance.jpg" alt="MBBS Entrance">
-            <div class="diagonal-overlay">Please login to continue</div>
+            <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete MBBS Entrance Course</div>
             <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
         </div>
@@ -344,7 +345,7 @@
         <!-- Complete BDS Entrance -->
         <div class="gallery-item">
             <img src="course_picture/BDS_Entrance.png" alt="BDS Entrance"> 
-            <div class="diagonal-overlay">Please login to continue</div>
+            <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete BDS Entrance</div>
             <div class="topic-description">Thorough preparation for the BDS entrance examination.</div>
         </div>
@@ -352,7 +353,7 @@
         <!-- Complete B-Pharma Entrance course -->
         <div class="gallery-item">
            <img src="course_picture/B-Pharma_entrance.jpg" alt="B-Pharma Entrance"> 
-           <div class="diagonal-overlay">Please login to continue</div>
+           <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete B-Pharma Entrance Course</div>
             <div class="topic-description">Comprehensive preparation for B-Pharma entrance exams.</div>
         </div>
@@ -360,7 +361,7 @@
         <!-- Complete C-MAT -->
         <div class="gallery-item">
             <img src="course_picture/C-MAT.jpg" alt="CMAT"> 
-            <div class="diagonal-overlay">Please login to continue</div>
+            <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete C-MAT</div>
             <div class="topic-description">Ace the Common Management Admission Test (CMAT).</div>
         </div>
@@ -368,7 +369,7 @@
         <!-- Complete Nursing Entrance -->
         <div class="gallery-item">
             <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance"> 
-            <div class="diagonal-overlay">Please login to continue</div>
+            <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete Nursing Entrance</div>
             <div class="topic-description">Prepare thoroughly for the Nursing entrance examination.</div>
         </div>
@@ -376,7 +377,7 @@
         <!-- Complete Physics -->
         <div class="gallery-item">
             <img src="course_picture/Physics.jpg" alt="Physics">
-            <div class="diagonal-overlay">Please login to continue</div>
+            <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete Physics Course</div>
             <div class="topic-description">Comprehensive physics course for students.</div>
         </div>
@@ -384,7 +385,7 @@
         <!-- Complete Chemistry -->
         <div class="gallery-item">
                 <img src="course_picture/CHemistry.jpg" alt="Chemistry">
-                <div class="diagonal-overlay">Please login to continue</div>
+                <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete Chemistry Course</div>
             <div class="topic-description">In-depth chemistry course for aspiring chemists.</div>
         </div>
@@ -392,7 +393,7 @@
         <!-- Complete Zoology -->
         <div class="gallery-item">
            <img src="course_picture/Biology.jpg" alt="Zoology"> 
-           <div class="diagonal-overlay">Please login to continue</div>
+           <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete Zoology Course</div>
             <div class="topic-description">Full-length Zoology course for entrance exams.</div>
         </div>
@@ -400,11 +401,17 @@
         <!-- Complete Botany -->
         <div class="gallery-item">
             <img src="course_picture/Botany.png" alt="Botany"> 
-            <div class="diagonal-overlay">Please login to continue</div>
+            <div class="diagonal-overlay" onclick="scrollToTop()">Please login to continue</div>
             <div class="topic-title">Complete Botany Course</div> 
             <div class="topic-description">Full-length Botany course for entrance exams.</div>
         </div>
     </div>
+    <script>
+        // JavaScript function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
 
