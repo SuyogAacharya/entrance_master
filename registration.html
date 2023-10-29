@@ -56,7 +56,7 @@
         }
 
         .input-box input {
-            width: 100%;
+            width: 85%;
             height: 100%;
             background: transparent;
             border: none;
@@ -64,12 +64,19 @@
             color: #333;
             padding: 10px 20px;
             outline: none;
-            text-align: left;
         }
 
         .input-box input::placeholder {
             color: #777;
-            text-align: left;
+        }
+
+        /* Password visibility toggle button styles */
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
         }
 
         /* Select box styles */
@@ -126,7 +133,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <a href="index.html" class="back-link">← </a>
+        <a href="index.html" class="back-link">←</a>
         <h1>Registration</h1>
         <div class="input-box">
             <input type="text" id="username" placeholder="Enter your full name">
@@ -139,6 +146,7 @@
         </div>
         <div class="input-box">
             <input type="password" id="password" placeholder="Enter your password">
+            <span class="password-toggle" onclick="togglePasswordVisibility()">&#128065;</span>
         </div>
         <div class="select-box">
             <select id="class">
@@ -162,6 +170,14 @@
     </div>
 
     <script>
+        let passwordVisible = false;
+        const passwordField = document.getElementById('password');
+
+        function togglePasswordVisibility() {
+            passwordVisible = !passwordVisible;
+            passwordField.type = passwordVisible ? 'text' : 'password';
+        }
+
         function registerUser() {
             const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
