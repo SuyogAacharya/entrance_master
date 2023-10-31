@@ -17,7 +17,7 @@
             border-radius: 5px;
             padding: 30px;
             margin-top: 30px;
-            position: relative;
+            text-align: center;
         }
         .profile-photo-container {
             text-align: center;
@@ -33,27 +33,23 @@
             display: block;
             transition: opacity 0.3s;
         }
+        .upload-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
         .profile-name {
             font-size: 36px;
             font-weight: bold;
             color: #333;
-            margin: 0;
-        }
-        .profile-photo-container:hover .upload-button {
-            opacity: 1;
-        }
-        .upload-button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
+            margin: 20px 0;
         }
         .profile-class {
             font-size: 20px;
@@ -73,16 +69,19 @@
         .photo-upload-input {
             display: none;
         }
+        .profile-photo-container:hover .upload-button {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <div class="profile-container">
         <div class="profile-photo-container">
             <img class="profile-photo" src="default_photo.jpg" alt="Student Photo">
-            <h1 class="profile-name">John Doe</h1>
             <label for="photo" class="upload-button">Upload Photo</label>
             <input type="file" id="photo" name="photo" accept="image/*" class="photo-upload-input">
         </div>
+        <h1 class="profile-name">John Doe (will auto update with server)</h1>
         <p class="profile-class">Class: 10th Grade</p>
         <div class="profile-details">
             <p><strong>Enrolled Classes:</strong></p>
