@@ -10,13 +10,25 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden; /* Hide the main scroll bar */
         }
 
         /* Global styles */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f0f0;
-            overflow: hidden;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #07f113;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
             margin: 0;
         }
 
@@ -29,7 +41,7 @@
             left: 20px;
             z-index: 1;
             transition: left 0.3s ease;
-            color: #333;
+            color: #fff;
         }
 
         /* Sidebar container with background image */
@@ -45,14 +57,14 @@
             border-bottom-left-radius: 1rem;
             position: fixed;
             top: 0;
-            left: 0; /* Change this to '0' to make the sidebar initially visible */
+            left: -250px; /* Initially hide the sidebar */
             transition: left 0.3s ease;
         }
 
         /* Sidebar link styles */
         .sidebar a {
             text-decoration: none;
-            color: #0e0d0d;
+            color: #0d0e0d;
             display: block;
             padding: 10px 20px;
             transition: background-color 0.3s ease;
@@ -71,7 +83,7 @@
         /* Content container */
         .content {
             margin-left: 0;
-            padding: 20px;
+            padding: 0;
             transition: margin-left 0.3s ease;
         }
 
@@ -81,16 +93,89 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Hide the content scroll bar */
         }
 
-        /* Iframe styles */
-        iframe {
-            width: 100%;
-            border: none;
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0ba2e9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 200px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column; /* Adjusted to stack elements vertically */
+            align-items: center; /* Center elements horizontally */
+            position: relative;
+        }
+
+        .profile-picture {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #0fee08;
+            position: relative; /* Added to position the camera icon */
+        }
+
+        .camera-button {
+            font-size: 24px;
+            position: absolute;
+            bottom: 0.5px; /* Adjusted to place the icon just below 0.5px */
+            left: 50%; /* Center the icon horizontally */
+            transform: translateX(-50%); /* Center the icon horizontally */
+            cursor: pointer;
+            visibility: hidden; /* Hide the icon by default */
+        }
+
+        .profile-picture:hover .camera-button {
+            visibility: visible; /* Show the icon when hovering over the photo */
+        }
+
+        .profile-details {
+            text-align: left;
+        }
+
+        .profile-details h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-details p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .profile-section {
+            margin-top: 25px;
+        }
+
+        #file-input {
+            display: none; /* Hide the file input element */
         }
     </style>
 </head>
 <body>
+   
+
     <!-- Hamburger menu symbol -->
     <div class="hamburger">&#9776;</div>
 
@@ -105,20 +190,44 @@
         <a href="notice.html">📌 Notice</a>
         <a href="index.html">📖 Logout</a>
     </div>
-
-    <!-- Content container -->
-    <div class="content">
-        <div class="main-content">
-            <iframe name="content" src="student_profile.html"></iframe> <!-- Set the initial source to "student_profile.html" -->
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="default_photo.jpg" alt="Student Photo">
+            <label for="file-input" class="camera-button" title="Upload Photo">📷</label>
+        </div>
+        <input type="file" id="file-input" accept="image/*" style="display: none;">
+        <div class="profile-details">
+            <div class="profile-section">
+                <h1>Name</h1>
+                <p>John Doe</p>
+            </div>
+            <div class="profile-section">
+                <h1>Mobile no</h1>
+                <p>123-456-7890</p>
+            </div>
+            <div class profile-section="">
+                <h1>Email</h1>
+                <p>johndoe@example.com</p>
+            </div>
+            <div class="profile-section">
+                <h1>Class</h1>
+                <p>10th Grade</p>
+            </div>
+            <div class="profile-section">
+                <h1>Enrolled Classes</h1>
+                <p>Mathematics, Science, History</p>
+            </div>
         </div>
     </div>
-
+    <!-- Content container -->
+    <div class="content">
+        
+    </div>
     <script>
         // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
         const sidebar = document.querySelector('.sidebar');
         const content = document.querySelector('.content');
-        const iframe = document.querySelector('iframe');
 
         let isSidebarVisible = false;
 
@@ -128,16 +237,11 @@
                 content.style.marginLeft = '250px';
                 isSidebarVisible = true;
             } else {
-                sidebar.style.left = '0';
+                sidebar.style.left = '-250px';
                 content.style.marginLeft = '0';
                 isSidebarVisible = false;
             }
         });
-
-        // Function to resize the iframe based on its content
-        function resizeIframe(iframe) {
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-        }
     </script>
 </body>
 </html>
