@@ -227,21 +227,19 @@
         // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
         const sidebar = document.querySelector('.sidebar');
-        const content = document.querySelector('.content');
-
+    
         let isSidebarVisible = false;
-
+    
         hamburger.addEventListener('click', () => {
             if (!isSidebarVisible) {
                 sidebar.style.left = '0';
-                content.style.marginLeft = '250px';
                 isSidebarVisible = true;
             } else {
                 sidebar.style.left = '-250px';
-                content.style.marginLeft = '0';
                 isSidebarVisible = false;
             }
         });
     </script>
+    
 </body>
 </html>
