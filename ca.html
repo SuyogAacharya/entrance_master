@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chartered Accountancy Gallery</title>
+    <title>CA Gallery</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -45,17 +45,50 @@
             color: #333;
         }
 
-        /* Fancy apology paragraph */
-        .apology {
-            font-size: 20px;
-            margin: 20px 0;
-            color: #333;
-            text-align: center;
-            padding: 10px;
-            background-color: #ffe4e1;
-            border: 1px solid #ff6b6b;
+        /* Gallery container styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Gallery item styles for CAP-I, CAP-II, and CAP-III */
+        .CAP-I, .CAP-II, .CAP-III {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Image styles */
+        .CAP-I img, .CAP-II img, .CAP-III img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Topic title styles */
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Topic description styles */
+        .topic-description {
+            font-size: 16px;
+            padding: 10px;
+            color: #555;
+        }
+
+        /* Hover effect on gallery items */
+        .CAP-I:hover, .CAP-II:hover, .CAP-III:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -63,10 +96,34 @@
     <!-- Header -->
     <div class="header">
         <a class="left-arrow" href="courses.html">&#8592;</a> <!-- Left-facing arrow -->
-        <h1>Chartered Accountancy Gallery</h1>
+        <h1>CA Gallery</h1>
     </div>
 
-    <!-- Fancy Apology Paragraph -->
-    <p class="apology">Sorry for the interruption. We are working on it to bring you the best Chartered Accountancy content. Stay tuned!</p>
+    <!-- Gallery for Class 11 Subjects -->
+    <div class="gallery">
+        <!-- CAP-I -->
+        <div class="CAP-I">
+            <a href=""><img src="course_picture/Physics.jpg" alt="CAP-I"> </a>
+            <div class="topic-title">CAP-I</div>
+            <div class="topic-description">Complete detailed course of CAP-I.</div>
+        </div>
+
+        <!-- CAP-II -->
+        <div class="CAP-II">
+            <a href=""><img src="course_picture/CHemistry.jpg" alt="CAP-II"></a>
+            <div class="topic-title">CAP-II</div>
+            <div class="topic-description">Complete detailed course of CAP-II.</div>
+        </div>
+
+        <!-- CAP-III -->
+        <div class="CAP-III">
+            <a href=""><img src="course_picture/Biology.jpg" alt="CAP-III"></a>
+            <div class="topic-title">CAP-III</div>
+            <div class="topic-description">Complete detailed course of CAP-III.</div>
+        </div>
+
+        <!-- Additional Gallery Items (if needed) -->
+
+    </div>
 </body>
 </html>
