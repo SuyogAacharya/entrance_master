@@ -5,120 +5,103 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fcfdfd;
+            background-color: #fcdfdf;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
         .profile-container {
             max-width: 600px;
-            margin: 0 auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            padding: 30px;
-            margin-top: 30px;
-            text-align: center;
-        }
-        .profile-photo-container {
-            text-align: center;
+            border-radius: 200px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column; /* Adjusted to stack elements vertically */
+            align-items: center; /* Center elements horizontally */
             position: relative;
         }
-        .profile-photo {
-            width: 150px;
-            height: 150px;
+
+        .profile-picture {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #3498db;
-            margin: 0 auto 20px;
-            display: block;
-            transition: opacity 0.3s;
+            border: 5px solid #0fee08;
+            position: relative; /* Added to position the camera icon */
         }
-        .upload-button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 5px 10px;
-            border: none;
+
+        .camera-button {
+            font-size: 24px;
+            position: absolute;
+            bottom: 0.5px; /* Adjusted to place the icon just below 0.5px */
+            left: 50%; /* Center the icon horizontally */
+            transform: translateX(-50%); /* Center the icon horizontally */
             cursor: pointer;
-            border-radius: 5px;
-            display: block;
-            margin: 0 auto;
-            opacity: 0;
-            transition: opacity 0.3s;
+            visibility: hidden; /* Hide the icon by default */
         }
-        .profile-name {
-            font-size: 36px;
+
+        .profile-picture:hover .camera-button {
+            visibility: visible; /* Show the icon when hovering over the photo */
+        }
+
+        .profile-details {
+            text-align: left;
+        }
+
+        .profile-details h1 {
+            font-size: 24px;
             font-weight: bold;
             color: #333;
-            margin: 20px 0;
         }
-        .profile-class {
-            font-size: 20px;
+
+        .profile-details p {
+            font-size: 18px;
             color: #555;
         }
-        .profile-details {
-            margin-top: 20px;
-            font-size: 18px;
+
+        .profile-section {
+            margin-top: 25px;
         }
-        .class-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .class-list-item {
-            margin-bottom: 10px;
-        }
-        .photo-upload-input {
-            display: none;
-        }
-        .profile-photo-container:hover .upload-button {
-            opacity: 1;
+
+        #file-input {
+            display: none; /* Hide the file input element */
         }
     </style>
 </head>
 <body>
-    <h1 style="color: #4CAF50; text-align: center;">Profile</h1>
     <div class="profile-container">
-        <div class="profile-photo-container">
-            <img class="profile-photo" src="default_photo.jpg" alt="Student Photo">
-            <label for="photo" class="upload-button">Upload Photo</label>
-            <input type="file" id="photo" name="photo" accept="image/*" class="photo-upload-input">
+        <div class="profile-picture">
+            <img src="default_photo.jpg" alt="Student Photo">
+            <label for="file-input" class="camera-button" title="Upload Photo">📷</label>
         </div>
-        <h1 class="profile-name">John Doe (will auto update with server)</h1>
-        <p class="profile-class">Class: 10th Grade</p>
+        <input type="file" id="file-input" accept="image/*" style="display: none;">
         <div class="profile-details">
-            <p><strong>Enrolled Classes:</strong></p>
-            <ul class="class-list">
-                <li class="class-list-item">Mathematics</li>
-                <li class="class-list-item">Science</li>
-                <li class="class-list-item">History</li>
-            </ul>
+            <div class="profile-section">
+                <h1>Name</h1>
+                <p>John Doe</p>
+            </div>
+            <div class="profile-section">
+                <h1>Mobile no</h1>
+                <p>123-456-7890</p>
+            </div>
+            <div class profile-section="">
+                <h1>Email</h1>
+                <p>johndoe@example.com</p>
+            </div>
+            <div class="profile-section">
+                <h1>Class</h1>
+                <p>10th Grade</p>
+            </div>
+            <div class="profile-section">
+                <h1>Enrolled Classes</h1>
+                <p>Mathematics, Science, History</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        // Simulate fetching user data from a server
-        setTimeout(() => {
-            const userData = {
-                name: "John Doe",
-                class: "10th Grade",
-                enrolledClasses: ["Mathematics", "Science", "History"]
-            };
-
-            // Update the profile information with the fetched data
-            document.querySelector(".profile-name").textContent = userData.name;
-            document.querySelector(".profile-class").textContent = "Class: " + userData.className;
-
-            // Clear the enrolled classes list
-            const classList = document.querySelector(".class-list");
-            classList.innerHTML = "";
-
-            // Populate the enrolled classes list
-            userData.enrolledClasses.forEach(className => {
-                const listItem = document.createElement("li");
-                listItem.className = "class-list-item";
-                listItem.textContent = className;
-                classList.appendChild(listItem);
-            });
-        }, 1000); // Simulating a delay to fetch data (1 second)
-    </script>
 </body>
 </html>
