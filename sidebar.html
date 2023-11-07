@@ -63,6 +63,11 @@
             background-color: #0abe0a;
         }
 
+        /* Active link style */
+        .sidebar a.active {
+            background-color: #0abe0a;
+        }
+
         /* Content container */
         .content {
             margin-left: 0;
@@ -89,17 +94,17 @@
     <!-- Hamburger menu symbol -->
     <div class="hamburger">&#9776;</div>
 
-  <!-- Sidebar container -->
-<div class="sidebar">
-    <!-- Sidebar links with symbols/icons -->
-    <a href="courses.html">📚 Our Courses</a>
-    <a href="qad.html">❓ QAD</a>
-    <a href="Notes.html">📓 Notes</a>
-    <a href="About_us.html">🏢 About Us</a>
-    <a href="notice.html">📌 Notice</a>
-    <a href="index.html">📖 Logout</a>
-</div>
-
+    <!-- Sidebar container -->
+    <div class="sidebar">
+        <!-- Sidebar links with symbols/icons -->
+        <a href="student_profile.html" class="active">👤 Profile</a>
+        <a href="courses.html">📚 Our Courses</a>
+        <a href="qad.html">❓ QAD</a>
+        <a href="Notes.html">📓 Notes</a>
+        <a href="About_us.html">🏢 About Us</a>
+        <a href="notice.html">📌 Notice</a>
+        <a href="index.html">📖 Logout</a>
+    </div>
 
     <!-- Content container -->
     <div class="content">
@@ -113,6 +118,7 @@
         const hamburger = document.querySelector('.hamburger');
         const sidebar = document.querySelector('.sidebar');
         const content = document.querySelector('.content');
+        const iframe = document.querySelector('iframe');
 
         let isSidebarVisible = false;
 
