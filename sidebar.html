@@ -41,7 +41,7 @@
             left: 20px;
             z-index: 1;
             transition: left 0.3s ease;
-            color: #111111;
+            color: x#111111;
         }
 
         /* Sidebar container with background image */
@@ -103,17 +103,79 @@
             text-align: center;
             padding: 10px 0;
         }
-        
-        /* Make the sidebar responsive for smaller screens */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%; /* Make the sidebar full width for smaller screens */
-                left: -100%; /* Initially hide the sidebar off the screen */
-            }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edf1f3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 200px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column; /* Adjusted to stack elements vertically */
+            align-items: center; /* Center elements horizontally */
+            position: relative;
+        }
+
+        .profile-picture {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #0fee08;
+            position: relative; /* Added to position the camera icon */
+        }
+
+        .camera-button {
+            font-size: 24px;
+            position: absolute;
+            bottom: 0.5px; /* Adjusted to place the icon just below 0.5px */
+            left: 50%; /* Center the icon horizontally */
+            transform: translateX(-50%); /* Center the icon horizontally */
+            cursor: pointer;
+            visibility: hidden; /* Hide the icon by default */
+        }
+
+        .profile-picture:hover .camera-button {
+            visibility: visible; /* Show the icon when hovering over the photo */
+        }
+
+        .profile-details {
+            text-align: left;
+        }
+
+        .profile-details h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-details p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .profile-section {
+            margin-top: 25px;
+        }
+
+        #file-input {
+            display: none; /* Hide the file input element */
         }
     </style>
 </head>
 <body>
+   
+
     <!-- Hamburger menu symbol -->
     <div class="hamburger">&#9776;</div>
 
@@ -127,25 +189,56 @@
         <a href="notice.html">📌 Notice</a>
         <a href="index.html">📖 Logout</a>
     </div>
-
-    <!-- Rest of your content, profile section, and main content -->
-    
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="default_photo.jpg" alt="Student Photo">
+            <label for="file-input" class="camera-button" title="Upload Photo">📷</label>
+        </div>
+        <input type="file" id="file-input" accept="image/*" style="display: none;">
+        <div class="profile-details">
+            <div class="profile-section">
+                <h1>Name</h1>
+                <p>John Doe</p>
+            </div>
+            <div class="profile-section">
+                <h1>Mobile no</h1>
+                <p>123-456-7890</p>
+            </div>
+            <div class profile-section="">
+                <h1>Email</h1>
+                <p>johndoe@example.com</p>
+            </div>
+            <div class="profile-section">
+                <h1>Class</h1>
+                <p>10th Grade</p>
+            </div>
+            <div class="profile-section">
+                <h1>Enrolled Classes</h1>
+                <p>Mathematics, Science, History</p>
+            </div>
+        </div>
+    </div>
+    <!-- Content container -->
+    <div class="content">
+        
+    </div>
     <script>
         // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
         const sidebar = document.querySelector('.sidebar');
-
+    
         let isSidebarVisible = false;
-
+    
         hamburger.addEventListener('click', () => {
             if (!isSidebarVisible) {
                 sidebar.style.left = '0';
                 isSidebarVisible = true;
             } else {
-                sidebar.style.left = '-100%'; // Adjust the value for smaller screens
+                sidebar.style.left = '-250px';
                 isSidebarVisible = false;
             }
         });
     </script>
+    
 </body>
 </html>
