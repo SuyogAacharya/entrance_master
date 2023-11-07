@@ -45,7 +45,7 @@
             border-bottom-left-radius: 1rem;
             position: fixed;
             top: 0;
-            left: -250px;
+            left: 0; /* Change this to '0' to make the sidebar initially visible */
             transition: left 0.3s ease;
         }
 
@@ -109,7 +109,7 @@
     <!-- Content container -->
     <div class="content">
         <div class="main-content">
-            <iframe name="content" src="student_profile.html" style="height: 4000px;"></iframe>
+            <iframe name="content" src="student_profile.html"></iframe> <!-- Set the initial source to "student_profile.html" -->
         </div>
     </div>
 
@@ -128,7 +128,7 @@
                 content.style.marginLeft = '250px';
                 isSidebarVisible = true;
             } else {
-                sidebar.style.left = '-250px';
+                sidebar.style.left = '0';
                 content.style.marginLeft = '0';
                 isSidebarVisible = false;
             }
