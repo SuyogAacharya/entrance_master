@@ -39,6 +39,7 @@
             flex-direction: column;
             align-items: left;
             padding: 20px;
+            position: relative; /* Added positioning */
         }
 
         /* Welcome message */
@@ -56,7 +57,7 @@
 
         .welcome-image {
             width: 100%;
-            height: 300px;
+            height: 250px;
             object-fit: cover;
             border-radius: 8px;
         }
@@ -72,7 +73,10 @@
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #3498db;
-            margin-top: 0.5px;
+            margin-top:135px; /* Adjust as needed */
+            margin-left: 20px; /* Adjust as needed */
+            position: absolute; /* Added positioning */
+            z-index: 1; /* Ensure it's on top */
         }
 
         /* Student name */
@@ -80,7 +84,7 @@
             font-size: 28px;
             font-weight: bold;
             color: #333;
-            margin-top: 20px;
+            margin-top: 20px; /* Adjusted margin */
         }
 
         /* Enrolled courses and Recommended courses */
@@ -91,7 +95,7 @@
         .courses h2 {
             font-size: 30px;
             font-weight: bold;
-            color: #333;
+            color: #0d12ed;
             margin-top: 20px;
             text-align: left;
         }
@@ -123,13 +127,12 @@
             height: auto;
             border-radius: 8px 8px 0 0;
         }
-
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Welcome! </h1>
+        <h1>Welcome!</h1>
     </header>
 
     <!-- Student Profile -->
@@ -139,7 +142,7 @@
             <img src="Welcome_image.jpg" alt="Welcome Image" class="welcome-image">
         </div>
 
-        <!-- Student Photo -->
+        <!-- Circular student photo -->
         <img class="student-photo" src="student_photo.jpg" alt="Student Photo">
         
         <!-- Student Name -->
@@ -152,117 +155,14 @@
             <!-- Empty Enrolled Courses Message (display when no courses are enrolled) -->
             <div class="empty-courses">No course enrolled.</div>
         </div>
-
-        
-<!-- Recommended Courses -->
-<div class="courses">
-    <h2>Recommended Courses</h2>
-    <div class="course-gallery">
-        <!-- Complete MBBS Entrance course -->
-        <div class="gallery-item" onclick="showMessage('mbbs.html')">
-            <img src="course_picture/mbbs_entrance.jpg" alt="MBBS Entrance">
-            <div class="topic-title">Complete MBBS Entrance Course</div>
-            <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
-        </div>
-
-        <!-- Complete BDS Entrance -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-            <img src="course_picture/BDS_Entrance.png" alt="BDS Entrance">
-            <div class="topic-title">Complete BDS Entrance</div>
-            <div class="topic-description">Thorough preparation for the BDS entrance examination.</div>
-        </div>
-
-         <!-- Complete B-Pharma Entrance  -->
-         <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-            <img src="course_picture/B-Pharma_entrance.jpg" alt="B-Pharma Entrance">
-        <div class="topic-title">Complete B-Pharma Entrance Course</div>
-        <div class="topic-description">Comprehensive preparation for B-Pharma entrance exams.</div>
     </div>
-         
-    <!-- Complete C-MAT -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/C-MAT.jpg" alt="CMAT">
-            </a>
-            <div class="topic-title">Complete C-MAT</div>
-            <div class="topic-description">Ace the Common Management Admission Test (CMAT).</div>
-        </div>
 
-        <!-- Complete Nursing Entrance -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance">
-            <div class="topic-title">Complete Nursing Entrance</div>
-            <div class="topic-description">Prepare thoroughly for the Nursing entrance examination.</div>
-        </div>
-
-        <!-- Complete Physics -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/Physics.jpg" alt="Physics">
-            <div class="topic-title">Complete Physics Course</div>
-            <div class="topic-description">Comprehensive physics course for students.</div>
-        </div>
-
-        <!-- Complete Chemistry -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/CHemistry.jpg" alt="Chemistry">
-            <div class="topic-title">Complete Chemistry Course</div>
-            <div class="topic-description">In-depth chemistry course for aspiring chemists.</div>
-        </div>
-
-        <!-- Complete Zoology -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/Biology.jpg" alt="Zoology">
-            <div class="topic-title">Complete Zoology Course</div>
-            <div class="topic-description">Full-length Zoology course for entrance exams.</div>
-        </div>
-
-        <!-- Complete Botany -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/Botany.png" alt="Botany">
-            <div class="topic-title">Complete Botany Course</div>
-            <div class="topic-description">Full-length Botany course for entrance exams.</div>
-        </div>
-        <!-- CAP-I -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="caimage/CAP-I.jpg" alt="CAP-I">
-            <div class="topic-title">CAP-I</div>
-            <div class="topic-description">Complete detailed course of CAP-I.</div>
-        </div>
-
-        <!-- CAP-II -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="caimage/CAP-II.jpg" alt="CAP-II">
-            <div class="topic-title">CAP-II</div>
-            <div class="topic-description">Complete detailed course of CAP-II.</div>
-        </div>
-
-        <!-- CAP-III -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="caimage/CAP-III.jpg" alt="CAP-III">
-            <div class="topic-title">CAP-III</div>
-            <div class="topic-description">Complete detailed course of CAP-III.</div>
-        </div>
-
-        <!-- Class 11 (science) -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="class 11.png" alt="Class 11 (science)">
-            <div class="topic-title">Complete Class 11 (Science) Course</div>
-            <div class="topic-description">Enhance your class-11 with us.</div>
-        </div>
-
-        <!-- Class 12 (science) -->
-        <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="Class 12.jpg" alt="Class 12 (science)">
-            <div class="topic-title">Complete Class 12 (Science) Course</div>
-            <div class="topic-description">Enhance your class-12 with us.</div>
+    <!-- Recommended Courses -->
+    <div class="courses">
+        <h2>Recommended Courses</h2>
+        <div class="course-gallery">
+            <!-- Add your course gallery items here -->
         </div>
     </div>
-</div>
-<script>
-    function showMessage(redirectURL) {
-        alert("Please redirect to 'OUR COURSE' to purchase the course.");
-        // You can redirect the user to the specified URL after showing the message.
-        // window.location.href = redirectURL;
-    }
-    </script>
 </body>
 </html>
