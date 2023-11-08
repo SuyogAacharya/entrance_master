@@ -291,5 +291,27 @@
                 </div>
         </div>
     </div>
+    <script>
+        // JavaScript to show/hide sidebar when clicking the hamburger symbol
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+
+        let isSidebarVisible = false;
+
+        hamburger.addEventListener('click', () => {
+            if (!isSidebarVisible) {
+                sidebar.style.left = '0';
+                isSidebarVisible = true;
+            } else {
+                sidebar.style.left = '-250px';
+                isSidebarVisible = false;
+            }
+        });
+        function showMessage(redirectURL) {
+        alert("Please redirect to 'OUR COURSE' to purchase the course.");
+        // You can redirect the user to the specified URL after showing the message.
+        // window.location.href = redirectURL;
+    }
+    </script>
 </body>
 </html>
