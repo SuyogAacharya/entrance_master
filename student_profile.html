@@ -4,14 +4,39 @@
     <title>Student Profile</title>
     <style>
         body {
+    font-family: Arial, sans-serif;
+    background: url('sidebar_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Make the layout vertical */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+        .header {
+            background-color: #07f113;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
             font-family: Arial, sans-serif;
-            background-color: #fcdfdf;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+
+        .header h1 {
+            margin: 0; /* Remove default margin */
+        }
+
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
         }
 
         .profile-container {
@@ -74,6 +99,11 @@
     </style>
 </head>
 <body>
+     <!-- Header -->
+     <div class="header">
+        <a class="left-arrow" href="sidebar.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1>Student profile</h1>
+        </div>
     <div class="profile-container">
         <div class="profile-picture">
             <img src="default_photo.jpg" alt="Student Photo">
