@@ -71,12 +71,34 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #3498db;
-            margin-top:135px; /* Adjust as needed */
+            object-fit: cover; /* Make the image fit inside the circle */
+            border: 5px solid #0c0c0c;
+            margin-top: -100px; /* Adjust as needed */
             margin-left: 20px; /* Adjust as needed */
-            position: absolute; /* Added positioning */
-            z-index: 1; /* Ensure it's on top */
+            position: relative; /* Added positioning */
+        }
+
+        .camera-button-container {
+            text-align: center;
+        }
+
+        .camera-button {
+            cursor: pointer;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0; /* Initially hide the icon */
+            transition: opacity 0.3s; /* Add a transition effect for opacity */
+        }
+
+        .student-photo:hover .camera-button {
+            opacity: 1; /* Show the icon on hover over the circular photo */
+        }
+
+        .camera-icon {
+            width: 40px;
+            height: 40px;
         }
 
         /* Student name */
@@ -143,8 +165,17 @@
         </div>
 
         <!-- Circular student photo -->
-        <img class="student-photo" src="student_photo.jpg" alt="Student Photo">
-        
+        <div class="student-photo">
+            <img src="" alt="Student Photo">
+            
+            <!-- Camera button below the circular photo -->
+            <div class="camera-button-container">
+                <div class="camera-button" id="photo-upload">
+                    <img src="camera_icon.png" alt="Upload Photo" class="camera-icon">
+                </div>
+            </div>
+        </div>
+
         <!-- Student Name -->
         <div class="student-name">John Doe</div>
 
@@ -156,7 +187,6 @@
             <div class="empty-courses">No course enrolled.</div>
         </div>
     </div>
-
     <!-- Recommended Courses -->
     <div class="courses">
         <h2>Recommended Courses</h2>
@@ -193,7 +223,7 @@
         
                 <!-- Complete Nursing Entrance -->
                 <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance">
+                    <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance">
                     <div class="topic-title">Complete Nursing Entrance</div>
                     <div class="topic-description">Prepare thoroughly for the Nursing entrance examination.</div>
                 </div>
