@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance Master Login</title>
+    <style>
+  /* Reset some default styles */
+  body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('Login page.jpg') no-repeat center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0; /* Position it at the top of the page */
+            left: 0; /* Position it at the left of the page */
+        }
+
+        /* Left-facing arrow styles */
+        .left-arrow {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        /* Container for the login form */
+        .login-container {
+            width: 400px;
+            background: #f2f2f2;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input box styles */
+        .input-box {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 45px;
+            background: #f9f9f9;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            padding: 10px;
+            outline: none;
+            border: 1px solid #ddd;
+        }
+
+        .input-box input::placeholder {
+            color: #999;
+        }
+
+        /* Style for the eye icon */
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        /* "Remember Me" checkbox styles */
+        .remember-me-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .remember-me-box label {
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-me-box input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Login button styles */
+        .btn-box {
+            margin-top: 20px;
+        }
+
+        .login-container .btn {
+            width: 100%;
+            height: 45px;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Updated styles for the message and links */
+        .action-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .forgot-password-link {
+            text-align: center;
+        }
+
+        
+
+        
+
+        .register-link {
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Page title styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Gallery container styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Gallery item styles */
+        .gallery-item {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Image styles */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Topic title styles */
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Topic description styles */
+        .topic-description {
+            font-size: 16px;
+            padding: 10px;
+            color: #555;
+        }
+
+        /* Hover effect on gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Diagonal overlay styles */
+        .diagonal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #FF5722, #2196F3);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            transform: scale(0);
+            transform-origin: 0% 100%;
+            transition: transform 0.3s, opacity 0.3s;
+            cursor: pointer;
+        }
+
+        /* Show diagonal overlay on hover */
+        .gallery-item:hover .diagonal-overlay {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <a class="left-arrow" href="index.html">&#8592;</a> <!-- Left-facing arrow -->
+    </div>
+    
+    </div>
+    <div class="login-container">
+        <h1>Welcome to Entrance Master</h1>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="E-mail">
+        </div>
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password">
+            <i class="eye-icon" id="togglePassword" onclick="togglePasswordVisibility()">👁️</i>
+        </div>
+        <div class="action-links">
+            <!-- Add a "Forgot Password" link inside the login box -->
+            <div class="forgot-password-link">
+                <a href="forget_password.html">Forgot Password?</a>
+            </div>
+            <!-- Add a "Register" link inside the login box -->
+            <div class="register-link">
+                <a href="registration.html">Register</a>
+            </div>
+        </div>
+        <div class="remember-me-box">
+            <label>
+                <input type="checkbox" id="rememberMe"> Remember Me
+            </label>
+        </div>
+        <div class="btn-box">
+            <button type="button" class="btn" onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var togglePasswordButton = document.getElementById("togglePassword");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePasswordButton.textContent = "👁️";
+            } else {
+                passwordInput.type = "password";
+                togglePasswordButton.textContent = "👁️";
+            }
+        }
+
+        function login() {
+            var enteredUsername = document.getElementById("username").value;
+            var enteredPassword = document.getElementById("password").value;
+            var rememberMe = document.getElementById("rememberMe").checked;
+
+            var allowedUsername = "admin";
+            var allowedPassword = "admin01";
+
+            if (!enteredUsername || !enteredPassword) {
+                alert("Please enter both a username and password.");
+                return;
+            }
+
+            if (enteredUsername === allowedUsername && enteredPassword === allowedPassword) {
+                window.location.href = "sidebar.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+    </body>
+</html>

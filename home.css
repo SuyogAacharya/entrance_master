@@ -1,0 +1,368 @@
+.swiper {
+    width: 100%;
+}
+#swiper {
+    margin-bottom: 2rem;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    top: 50% !important;
+}
+.image img {
+    width: 100%;
+    margin-top: 1rem;
+}
+.content span {
+    color: var(--green);
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+.content h3 {
+    color: var(--black);
+    font-size: 3.3rem;
+    line-height: 1.2;
+    /* letter-spacing: -2px; */
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: -2.5px;
+    font-family: "Poppins", sans-serif;
+}
+.content p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    /* padding: 0.5rem 0; */
+    line-height: 1.5;
+    /* margin-bottom: 2rem; */
+}
+.btn {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1.8rem;
+    text-decoration: none;
+    transition: all;
+    font-weight: 600;
+}
+.btn:hover {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.count-area {
+    position: relative;
+    background: var(--black);
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.count-area-content {
+    margin-top: 30px;
+}
+
+.count-area i {
+    font-size: 48px;
+}
+
+.count-digit {
+    margin: 20px 0px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.count-title {
+    font-size: 20px;
+}
+
+.count-digit::after {
+    content: "+";
+}
+
+#popular-course {
+    margin-top: 2rem;
+}
+.single-course {
+    border-radius: 9px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all;
+    cursor: pointer;
+}
+.thumbnail img {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+.single-course:hover {
+    border: 2px solid var(--green);
+}
+.course-info-wrapper {
+    padding: 1rem;
+}
+.category-name {
+    font-weight: bold;
+    color: var(--light-color);
+    font-size: 12px;
+}
+.course-title a {
+    font-size: 21px;
+    font-weight: 500;
+    color: #212832;
+    display: inline-block;
+    line-height: 1.3;
+    text-decoration: none;
+    margin-top: 0.4rem;
+}
+.course-price-review {
+    background-color: #eefbf3;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: all;
+    text-align: center;
+    margin-top: 1rem;
+}
+.original-price {
+    text-decoration: line-through;
+    color: var(--green);
+    font-weight: 500;
+    font-size: 18px;
+    padding-right: 1rem;
+}
+.sale-price {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 20px;
+    padding-right: 1rem;
+}
+.voted {
+    color: orange;
+}
+.view-all {
+    margin-top: 2rem;
+    text-align: end;
+}
+.view-all a {
+    text-align: end;
+}
+@media (max-width: 600px) {
+    .swiper {
+        width: 100%;
+        height: auto;
+    }
+    .content {
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .count-digit {
+        margin: 1px 0px;
+        font-size: 40px;
+    }
+    .row {
+        gap: 1rem;
+    }
+}
+
+/* faqs  */
+.heading,
+.course-heading {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 6rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+.heading span,
+.course-heading span {
+    color: var(--green);
+}
+.heading span::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/shape-underline.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 121.9px;
+    height: 24px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    right: 50%;
+    margin-top: 3.1rem;
+}
+.course-heading span::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/shape-underline.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 121.9px;
+    height: 24px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-top: 3.4rem;
+    left: 151px;
+}
+
+.faqs-img img {
+    width: 100%;
+}
+.c-wrapper {
+    width: 100%;
+}
+.c-wrapper .parent-tab,
+.c-wrapper .child-tab {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: var(--box-shadow);
+}
+.c-wrapper .parent-tab label,
+.c-wrapper .child-tab label {
+    background: var(--green);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+.c-wrapper .parent-tab label:hover {
+    background: #34e27d;
+}
+.parent-tab input:checked ~ label,
+.child-tab input:checked ~ label {
+    border-radius: 3px 3px 0 0;
+    background: var(--green);
+}
+.c-wrapper label span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+.c-wrapper .child-tab label span {
+    font-size: 17px;
+}
+.parent-tab label .icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    color: var(--green);
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    text-shadow: 0 -1px 1px var(--green);
+    left: 0;
+}
+.c-wrapper .child-tab label .icon {
+    height: 27px;
+    width: 27px;
+}
+.parent-tab label .icon i {
+    position: absolute;
+    top: 26%;
+    right: 30%;
+}
+.parent-tab input:checked ~ label .icon i:before,
+.child-tab input:checked ~ label .icon i:before {
+    content: "\f068";
+}
+.c-wrapper .parent-tab .content,
+.c-wrapper .child-tab .sub-content {
+    max-height: 0px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+    transition: all 0.4s ease;
+}
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content {
+    max-height: fit-content;
+}
+input:checked ~ .content {
+    /* padding: 15px 20px; */
+}
+.parent-tab .content p,
+.child-tab .sub-content p {
+    color: var(--light-color);
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.child-tab .sub-content p {
+    font-size: 15px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+.enrolled-courses {
+    margin-bottom: 3rem;
+}
+@media (max-width: 600px) {
+    #swiper {
+        margin-top: 5rem;
+    }
+    .content span {
+        font-size: 1.3rem;
+    }
+    .content h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-family: "Poppins";
+    }
+    .content p {
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    .count-area-content {
+        margin-top: 1rem;
+        line-height: 1.2;
+    }
+    .heading,
+    .course-heading {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    .faqs-img {
+        display: none;
+    }
+    #faqs {
+        grid-template-columns: 1fr;
+    }
+    .heading,
+    .course-heading {
+        font-size: 2rem;
+    }
+    .heading span::before,
+    .course-heading span::before {
+        display: none;
+    }
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--black);
+}
+.swiper-pagination {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.modal {
+    z-index: 9999999;
+}

@@ -1,0 +1,103 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add a background color to the header and style its contents */
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.header__logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.header__btn {
+    background-color: #f09b0f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Style the navigation menu */
+.my-nav {
+    display: none;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    margin-left: 20px;
+}
+
+.nav__item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #f09b0f;
+}
+
+/* Style the dropdown menu */
+.dropdown__menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown__item {
+    margin: 10px 0;
+}
+
+/* Display dropdown menu on hover */
+.nav__item:hover .dropdown__menu {
+    display: block;
+}
+
+/* Add more styles as needed */
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .header__toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .my-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .my-nav.active {
+        display: flex;
+    }
+}
