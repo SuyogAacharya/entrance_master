@@ -68,15 +68,16 @@
 
         /* Circular student photo */
         .student-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover; /* Make the image fit inside the circle */
-            border: 5px solid #0c0c0c;
-            margin-top: -100px; /* Adjust as needed */
-            margin-left: 20px; /* Adjust as needed */
-            position: relative; /* Added positioning */
-        }
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* This property ensures the image fits inside the circle */
+    border: 5px solid #0c0c0c;
+    margin-top: -100px; /* Adjust as needed */
+    margin-left: 20px; /* Adjust as needed */
+    position: relative; /* Added positioning */
+}
+
 
         .camera-button-container {
             text-align: center;
@@ -166,7 +167,7 @@
 
         <!-- Circular student photo -->
         <div class="student-photo">
-            <img src="" alt="Student Photo">
+            <img src="" alt="Student Photo"> <!--Photo must be inside the circle -->
             
             <!-- Camera button below the circular photo -->
             <div class="camera-button-container">
