@@ -13,9 +13,10 @@
 
         /* Global styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
+            color: #333;
         }
 
         /* Header styles */
@@ -23,14 +24,15 @@
             background-color: #0abe0a;
             color: #fff;
             padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: relative;
         }
 
         /* Left arrow styles */
         .left-arrow {
             position: absolute;
-            top: 10px;
+            top: 50%;
+            transform: translateY(-50%);
             left: 10px;
             font-size: 24px;
             color: #fff;
@@ -42,7 +44,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
-            color: #333;
+            text-transform: uppercase;
         }
 
         /* PDF list styles */
@@ -76,11 +78,61 @@
             font-weight: bold;
         }
 
+        /* Gallery styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Gallery item styles */
+        .gallery-item {
+            width: 250px;
+            height: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        /* Link styles within gallery items */
+        .gallery-item a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            transition: background-color 0.2s;
+        }
+
+        /* Hover effect on gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Image styles within gallery items */
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Title styles within gallery items */
+        .gallery-item h2 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #333;
+        }
+
         /* Footer styles */
         .footer {
             background-color: #0abe0a;
             color: #fff;
             padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -91,37 +143,42 @@
         <h1 class="title">Chartered Accountant Notes</h1>
     </div>
 
-    <!-- PDF List -->
-    <ol class="pdf-list"> <!-- Use <ol> for ordered list -->
-        <!-- Left space for future additions -->
+    <!-- Gallery -->
+    <div class="gallery">
+        <!-- CAP-I -->
+        <div class="gallery-item" onclick="openPDF('cap-i_notes.html')">
+            <a href="cap-i_notes.html">
+                <img src="caimage/CAP-I.jpg" alt="CAP-I">
+                <h2>CAP-I</h2>
+            </a>
+        </div>
 
-        <!-- PDF Item 1 (Left space intentionally blank) -->
-        <li class="pdf-list-item" onclick="openPDF('')">
-            <a class="pdf-link" href="" target="_blank"></a>
-        </li>
+        <!-- CAP-II -->
+        <div class="gallery-item" onclick="openPDF('cap-ii_notes.html')">
+            <a href="cap-ii_notes.html">
+                <img src="caimage/CAP-II.jpg" alt="CAP-II">
+                <h2>CAP-II</h2>
+            </a>
+        </div>
 
-        <!-- Left space for future additions -->
-
-        <!-- PDF Item 2 (Left space intentionally blank) -->
-        <li class="pdf-list-item" onclick="openPDF('')">
-            <a class="pdf-link" href="" target="_blank"></a>
-        </li>
-
-        <!-- Left space for future additions -->
-
-        <!-- Add more PDF items here with incrementing numbers -->
-
-    </ol>
+        <!-- CAP-III -->
+        <div class="gallery-item" onclick="openPDF('cap-iii_notes.html')">
+            <a href="cap-iii_notes.html">
+                <img src="caimage/CAP-III.jpg" alt="CAP-III">
+                <h2>CAP-III</h2>
+            </a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div class="footer">
-        &copy; All right reserved to Entrance Master.
+        &copy; All rights reserved to Entrance Master.
     </div>
 
     <script>
-        // Function to open a PDF in a new tab/window
+        // Function to open a PDF in the same tab
         function openPDF(pdfUrl) {
-            window.open(pdfUrl, "_blank");
+            window.location.href = pdfUrl;
         }
     </script>
 </body>
