@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile</title>
     <style>
         /* Reset default styles for html and body */
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -62,31 +64,24 @@
             border-radius: 8px;
         }
 
-        .welcome-text {
-            font-size: 24px;
-        }
         .circular-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the circular frame */
-    border-radius: 50%; /* Apply the circular border */
-}
-
-/* Rest of your CSS styles... */
-
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the circular frame */
+            border-radius: 50%; /* Apply the circular border */
+        }
 
         /* Circular student photo */
         .student-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: fill; /* This property ensures the image fits inside the circle */
-    border: 5px solid #0c0c0c;
-    margin-top: -100px; /* Adjust as needed */
-    margin-left: 20px; /* Adjust as needed */
-    position: relative; /* Added positioning */
-}
-
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: fill; /* This property ensures the image fits inside the circle */
+            border: 5px solid #0c0c0c;
+            margin-top: -100px; /* Adjust as needed */
+            margin-left: 20px; /* Adjust as needed */
+            position: relative; /* Added positioning */
+        }
 
         .camera-button-container {
             text-align: center;
@@ -159,6 +154,7 @@
             height: auto;
             border-radius: 8px 8px 0 0;
         }
+
         /* Footer styles */
         .footer {
             background-color: #0abe0a;
@@ -167,6 +163,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -180,19 +177,17 @@
             <img src="Welcome_image.jpg" alt="Welcome Image" class="welcome-image">
         </div>
 
-      <!-- Circular student photo -->
-<div class="student-photo">
-    <img src="defult_photo.jpg" alt="Student Photo" class="circular-photo"> <!--Photo must be inside the circle -->
-    
-    <!-- Camera button below the circular photo -->
-    <div class="camera-button-container">
-        <div class="camera-button" id="photo-upload">
-            <img src="camera_icon.png" alt="Upload Photo" class="camera-icon">
+        <!-- Circular student photo -->
+        <div class="student-photo">
+            <img src="default_photo.jpg" alt="Student Photo" class="circular-photo">
+            <!-- Camera button below the circular photo -->
+            <div class="camera-button-container">
+                <label for="photo-input" class="camera-button" id="photo-upload">
+                    <img src="camera_icon.png" alt="Upload Photo" class="camera-icon">
+                </label>
+                <input type="file" id="photo-input" accept="image/*" style="display: none;">
+            </div>
         </div>
-    </div>
-</div>
-
-
 
         <!-- Student Name -->
         <div class="student-name">John Doe</div>
@@ -200,7 +195,7 @@
         <!-- Enrolled Courses -->
         <div class="courses">
             <h2>Enrolled Courses</h2>
-            
+
             <!-- Empty Enrolled Courses Message (display when no courses are enrolled) -->
             <div class="empty-courses">No course enrolled.</div>
         </div>
@@ -209,106 +204,10 @@
     <div class="courses">
         <h2>Recommended Courses</h2>
         <div class="course-gallery">
-            <div class="course-gallery">
-                <!-- Complete MBBS Entrance course -->
-                <div class="gallery-item" onclick="showMessage('mbbs.html')">
-                    <img src="course_picture/mbbs_entrance.jpg" alt="MBBS Entrance">
-                    <div class="topic-title">Complete MBBS Entrance Course</div>
-                    <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
-                </div>
-        
-                <!-- Complete BDS Entrance -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/BDS_Entrance.png" alt="BDS Entrance">
-                    <div class="topic-title">Complete BDS Entrance</div>
-                    <div class="topic-description">Thorough preparation for the BDS entrance examination.</div>
-                </div>
-        
-                 <!-- Complete B-Pharma Entrance  -->
-                 <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/B-Pharma_entrance.jpg" alt="B-Pharma Entrance">
-                <div class="topic-title">Complete B-Pharma Entrance Course</div>
-                <div class="topic-description">Comprehensive preparation for B-Pharma entrance exams.</div>
-            </div>
-                 
-            <!-- Complete C-MAT -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="course_picture/C-MAT.jpg" alt="CMAT">
-                    </a>
-                    <div class="topic-title">Complete C-MAT</div>
-                    <div class="topic-description">Ace the Common Management Admission Test (CMAT).</div>
-                </div>
-        
-                <!-- Complete Nursing Entrance -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance">
-                    <div class="topic-title">Complete Nursing Entrance</div>
-                    <div class="topic-description">Prepare thoroughly for the Nursing entrance examination.</div>
-                </div>
-        
-                <!-- Complete Physics -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="course_picture/Physics.jpg" alt="Physics">
-                    <div class="topic-title">Complete Physics Course</div>
-                    <div class="topic-description">Comprehensive physics course for students.</div>
-                </div>
-        
-                <!-- Complete Chemistry -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="course_picture/CHemistry.jpg" alt="Chemistry">
-                    <div class="topic-title">Complete Chemistry Course</div>
-                    <div class="topic-description">In-depth chemistry course for aspiring chemists.</div>
-                </div>
-        
-                <!-- Complete Zoology -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="course_picture/Biology.jpg" alt="Zoology">
-                    <div class="topic-title">Complete Zoology Course</div>
-                    <div class="topic-description">Full-length Zoology course for entrance exams.</div>
-                </div>
-        
-                <!-- Complete Botany -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="course_picture/Botany.png" alt="Botany">
-                    <div class="topic-title">Complete Botany Course</div>
-                    <div class="topic-description">Full-length Botany course for entrance exams.</div>
-                </div>
-                <!-- CAP-I -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="caimage/CAP-I.jpg" alt="CAP-I">
-                    <div class="topic-title">CAP-I</div>
-                    <div class="topic-description">Complete detailed course of CAP-I.</div>
-                </div>
-        
-                <!-- CAP-II -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="caimage/CAP-II.jpg" alt="CAP-II">
-                    <div class="topic-title">CAP-II</div>
-                    <div class="topic-description">Complete detailed course of CAP-II.</div>
-                </div>
-        
-                <!-- CAP-III -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="caimage/CAP-III.jpg" alt="CAP-III">
-                    <div class="topic-title">CAP-III</div>
-                    <div class="topic-description">Complete detailed course of CAP-III.</div>
-                </div>
-        
-                <!-- Class 11 (science) -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="class 11.png" alt="Class 11 (science)">
-                    <div class="topic-title">Complete Class 11 (Science) Course</div>
-                    <div class="topic-description">Enhance your class-11 with us.</div>
-                </div>
-        
-                <!-- Class 12 (science) -->
-                <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                        <img src="Class 12.jpg" alt="Class 12 (science)">
-                    <div class="topic-title">Complete Class 12 (Science) Course</div>
-                    <div class="topic-description">Enhance your class-12 with us.</div>
-                </div>
+            <!-- Course items go here -->
         </div>
     </div>
+
     <script>
         // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
@@ -325,16 +224,32 @@
                 isSidebarVisible = false;
             }
         });
-        function showMessage(redirectURL) {
-        alert("Please redirect to 'OUR COURSE' to purchase the course.");
-        // You can redirect the user to the specified URL after showing the message.
-        // window.location.href = redirectURL;
-    }
+
+        document.getElementById('photo-input').addEventListener('change', function (event) {
+            const fileInput = event.target;
+            const files = fileInput.files;
+
+            if (files.length > 0) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    // Update the source of the circular photo
+                    const circularPhoto = document.querySelector('.circular-photo');
+                    circularPhoto.src = e.target.result;
+
+                    // You can also send the uploaded photo to the server for further processing if needed
+                };
+
+                // Read the uploaded file as a data URL
+                reader.readAsDataURL(files[0]);
+            }
+        });
     </script>
-    
-        <!-- Footer -->
-        <div class="footer">
-            &copy; All right reserved to Entrance Master.
-        </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; All right reserved to Entrance Master.
+    </div>
 </body>
+
 </html>
