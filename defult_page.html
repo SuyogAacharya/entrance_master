@@ -65,13 +65,22 @@
         .welcome-text {
             font-size: 24px;
         }
+        .circular-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circular frame */
+    border-radius: 50%; /* Apply the circular border */
+}
+
+/* Rest of your CSS styles... */
+
 
         /* Circular student photo */
         .student-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* This property ensures the image fits inside the circle */
+    object-fit: fill; /* This property ensures the image fits inside the circle */
     border: 5px solid #0c0c0c;
     margin-top: -100px; /* Adjust as needed */
     margin-left: 20px; /* Adjust as needed */
@@ -171,17 +180,19 @@
             <img src="Welcome_image.jpg" alt="Welcome Image" class="welcome-image">
         </div>
 
-        <!-- Circular student photo -->
-        <div class="student-photo">
-            <img src="" alt="Student Photo"> <!--Photo must be inside the circle -->
-            
-            <!-- Camera button below the circular photo -->
-            <div class="camera-button-container">
-                <div class="camera-button" id="photo-upload">
-                    <img src="camera_icon.png" alt="Upload Photo" class="camera-icon">
-                </div>
-            </div>
+      <!-- Circular student photo -->
+<div class="student-photo">
+    <img src="defult_photo.jpg" alt="Student Photo" class="circular-photo"> <!--Photo must be inside the circle -->
+    
+    <!-- Camera button below the circular photo -->
+    <div class="camera-button-container">
+        <div class="camera-button" id="photo-upload">
+            <img src="camera_icon.png" alt="Upload Photo" class="camera-icon">
         </div>
+    </div>
+</div>
+
+
 
         <!-- Student Name -->
         <div class="student-name">John Doe</div>
