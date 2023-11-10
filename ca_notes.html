@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chartered Accountant Notes</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Page title styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* PDF list styles */
+        .pdf-list {
+            list-style: decimal; /* Use decimal numbering for the list */
+            padding: 0;
+        }
+
+        /* PDF list item styles */
+        .pdf-list-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Hover effect on PDF list items */
+        .pdf-list-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* PDF link styles */
+        .pdf-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #0abe0a;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <a class="left-arrow" href="Notes.html">&#8592;</a>
+        <h1 class="title">Chartered Accountant Notes</h1>
+    </div>
+
+    <!-- PDF List -->
+    <ol class="pdf-list"> <!-- Use <ol> for ordered list -->
+        <!-- Left space for future additions -->
+
+        <!-- PDF Item 1 (Left space intentionally blank) -->
+        <li class="pdf-list-item" onclick="openPDF('')">
+            <a class="pdf-link" href="" target="_blank"></a>
+        </li>
+
+        <!-- Left space for future additions -->
+
+        <!-- PDF Item 2 (Left space intentionally blank) -->
+        <li class="pdf-list-item" onclick="openPDF('')">
+            <a class="pdf-link" href="" target="_blank"></a>
+        </li>
+
+        <!-- Left space for future additions -->
+
+        <!-- Add more PDF items here with incrementing numbers -->
+
+    </ol>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; All right reserved to Entrance Master.
+    </div>
+
+    <script>
+        // Function to open a PDF in a new tab/window
+        function openPDF(pdfUrl) {
+            window.open(pdfUrl, "_blank");
+        }
+    </script>
+</body>
+</html>
