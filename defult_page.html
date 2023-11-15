@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
+    <title>Student Profile - Entrance Master</title>
     <style>
         /* Reset default styles for html and body */
         html,
@@ -18,8 +18,7 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
-            overflow-x: hidden; /* Hide horizontal scrollbar */
-            overflow-y: scroll; /* Add vertical scrollbar */
+            overflow-x: hidden;
             margin: 0;
         }
 
@@ -40,9 +39,9 @@
         .profile-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
             padding: 20px;
-            position: relative; /* Added positioning */
+            position: relative;
         }
 
         /* Welcome message */
@@ -70,11 +69,11 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            object-fit: cover; /* This property ensures the image fits inside the circle */
+            object-fit: cover;
             border: 5px solid #0c0c0c;
-            margin-top: -100px; /* Adjust as needed */
-            margin-left: 20px; /* Adjust as needed */
-            position: relative; /* Added positioning */
+            margin-top: -100px;
+            margin-left: 20px;
+            position: relative;
         }
 
         .camera-button-container {
@@ -87,12 +86,12 @@
             bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            opacity: 0; /* Initially hide the icon */
-            transition: opacity 0.3s; /* Add a transition effect for opacity */
+            opacity: 0;
+            transition: opacity 0.3s;
         }
 
         .student-photo:hover .camera-button {
-            opacity: 1; /* Show the icon on hover over the circular photo */
+            opacity: 1;
         }
 
         .camera-icon {
@@ -105,7 +104,7 @@
             font-size: 28px;
             font-weight: bold;
             color: #333;
-            margin-top: 20px; /* Adjusted margin */
+            margin-top: 20px;
         }
 
         /* Enrolled courses and Recommended courses */
@@ -143,8 +142,8 @@
         }
 
         .gallery-item:hover {
-            transform: scale(1.05); /* Enlarge the item on hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .gallery-item img {
@@ -195,7 +194,7 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Welcome!</h1>
+        <h1>Welcome to Entrance Master!</h1>
     </header>
 
     <!-- Student Profile -->
@@ -223,146 +222,27 @@
         <!-- Enrolled Courses -->
         <div class="courses">
             <h2>Enrolled Courses</h2>
-
-            <!-- Empty Enrolled Courses Message (display when no courses are enrolled) -->
-            <div class="empty-courses">No course enrolled.</div>
+            <div class="empty-courses">No courses currently enrolled.</div>
         </div>
 
         <!-- Recommended Courses -->
-    <div class="courses">
-        <h2>Recommended Courses</h2>
-        <div class="course-gallery">
-            
-                <!--complete MBBS Entrance-->
-            <div class="gallery-item">
-                <img src="course_picture/mbbs_entrance.jpg" alt="MBBS Entrance">
-                <div class="course-info">
-                    <div class="topic-title">Complete MBBS Entrance Course</div>
-                    <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
-                    <a href="" class="enroll-btn">Enroll Now</a>
+        <div class="courses">
+            <h2>Recommended Courses</h2>
+            <div class="course-gallery">
+                <!-- Course 1: Complete MBBS Entrance -->
+                <div class="gallery-item">
+                    <img src="course_picture/mbbs_entrance.jpg" alt="MBBS Entrance">
+                    <div class="course-info">
+                        <div class="topic-title">Complete MBBS Entrance Course</div>
+                        <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
+                        <a href="https://forms.gle/azwp4NagGzqJkJDj6" class="enroll-btn">Enroll Now</a>
+                    </div>
                 </div>
+                <!-- Include other recommended courses similarly -->
             </div>
-        
-    
-            <!-- Complete BDS Entrance -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/BDS_Entrance.png" alt="BDS Entrance">
-                <div class="topic-title">Complete BDS Entrance</div>
-                <div class="topic-description">Thorough preparation for the BDS entrance examination.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-                </div>
-            </div>
-    
-             <!-- Complete B-Pharma Entrance  -->
-             <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/B-Pharma_entrance.jpg" alt="B-Pharma Entrance">
-            <div class="topic-title">Complete B-Pharma Entrance Course</div>
-            <div class="topic-description">Comprehensive preparation for B-Pharma entrance exams.</div>
-            <a href="" class="enroll-btn">Enroll Now</a>
         </div>
     </div>
-             
-        <!-- Complete C-MAT -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/C-MAT.jpg" alt="CMAT">
-                </a>
-                <div class="topic-title">Complete C-MAT</div>
-                <div class="topic-description">Ace the Common Management Admission Test (CMAT).</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-         </div>
-    
-            <!-- Complete Nursing Entrance -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance">
-                <div class="topic-title">Complete Nursing Entrance</div>
-                <div class="topic-description">Prepare thoroughly for the Nursing entrance examination.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- Complete Physics -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/Physics.jpg" alt="Physics">
-                <div class="topic-title">Complete Physics Course</div>
-                <div class="topic-description">Comprehensive physics course for students.</div>
-            
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
-    
-            <!-- Complete Chemistry -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/CHemistry.jpg" alt="Chemistry">
-                <div class="topic-title">Complete Chemistry Course</div>
-                <div class="topic-description">In-depth chemistry course for aspiring chemists.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- Complete Zoology -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/Biology.jpg" alt="Zoology">
-                <div class="topic-title">Complete Zoology Course</div>
-                <div class="topic-description">Full-length Zoology course for entrance exams.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- Complete Botany -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="course_picture/Botany.png" alt="Botany">
-                <div class="topic-title">Complete Botany Course</div>
-                <div class="topic-description">Full-length Botany course for entrance exams.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-            <!-- CAP-I -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="caimage/CAP-I.jpg" alt="CAP-I">
-                <div class="topic-title">CAP-I</div>
-                <div class="topic-description">Complete detailed course of CAP-I.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- CAP-II -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="caimage/CAP-II.jpg" alt="CAP-II">
-                <div class="topic-title">CAP-II</div>
-                <div class="topic-description">Complete detailed course of CAP-II.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- CAP-III -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="caimage/CAP-III.jpg" alt="CAP-III">
-                <div class="topic-title">CAP-III</div>
-                <div class="topic-description">Complete detailed course of CAP-III.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- Class 11 (science) -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="class 11.png" alt="Class 11 (science)">
-                <div class="topic-title">Complete Class 11 (Science) Course</div>
-                <div class="topic-description">Enhance your class-11 with us.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    
-            <!-- Class 12 (science) -->
-            <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
-                    <img src="Class 12.jpg" alt="Class 12 (science)">
-                <div class="topic-title">Complete Class 12 (Science) Course</div>
-                <div class="topic-description">Enhance your class-12 with us.</div>
-                <a href="" class="enroll-btn">Enroll Now</a>
-            </div>
-            </div>
-    </div>
-</div>
+
     <script>
         // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
@@ -398,14 +278,12 @@
                 // Read the uploaded file as a data URL
                 reader.readAsDataURL(files[0]);
             }
-            
         });
-
     </script>
 
     <!-- Footer -->
     <div class="footer">
-        &copy; All right reserved to Entrance Master.
+        &copy; All rights reserved to Entrance Master.
     </div>
 </body>
 
