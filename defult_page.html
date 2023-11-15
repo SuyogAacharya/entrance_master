@@ -20,6 +20,7 @@
             background-color: #f4f4f4;
             overflow-x: hidden; /* Hide horizontal scrollbar */
             overflow-y: scroll; /* Add vertical scrollbar */
+            margin: 0;
         }
 
         /* Header */
@@ -39,7 +40,7 @@
         .profile-container {
             display: flex;
             flex-direction: column;
-            align-items: left;
+            align-items: center;
             padding: 20px;
             position: relative; /* Added positioning */
         }
@@ -64,19 +65,12 @@
             border-radius: 8px;
         }
 
-        .circular-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure the image covers the circular frame */
-            border-radius: 50%; /* Apply the circular border */
-        }
-
         /* Circular student photo */
         .student-photo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            object-fit: fill; /* This property ensures the image fits inside the circle */
+            object-fit: cover; /* This property ensures the image fits inside the circle */
             border: 5px solid #0c0c0c;
             margin-top: -100px; /* Adjust as needed */
             margin-left: 20px; /* Adjust as needed */
@@ -117,6 +111,7 @@
         /* Enrolled courses and Recommended courses */
         .courses {
             text-align: center;
+            padding: 20px;
         }
 
         .courses h2 {
@@ -127,15 +122,18 @@
             text-align: left;
         }
 
+        /* CSS for course gallery */
         .course-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: left;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
         .gallery-item {
-            width: 300px;
-            margin: 20px;
+            width: 100%;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -150,9 +148,37 @@
         }
 
         .gallery-item img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             border-radius: 8px 8px 0 0;
+        }
+
+        .course-info {
+            padding: 10px;
+        }
+
+        .topic-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .topic-description {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .enroll-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .enroll-btn:hover {
+            background-color: #2d74da;
         }
 
         /* Footer styles */
@@ -161,6 +187,7 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -200,23 +227,30 @@
             <!-- Empty Enrolled Courses Message (display when no courses are enrolled) -->
             <div class="empty-courses">No course enrolled.</div>
         </div>
-    </div>
-    <!-- Recommended Courses -->
+
+        <!-- Recommended Courses -->
     <div class="courses">
         <h2>Recommended Courses</h2>
         <div class="course-gallery">
-            <!-- Complete MBBS Entrance course -->
-            <div class="gallery-item" onclick="showMessage('mbbs.html')">
+            
+                <!--complete MBBS Entrance-->
+            <div class="gallery-item">
                 <img src="course_picture/mbbs_entrance.jpg" alt="MBBS Entrance">
-                <div class="topic-title">Complete MBBS Entrance Course</div>
-                <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
+                <div class="course-info">
+                    <div class="topic-title">Complete MBBS Entrance Course</div>
+                    <div class="topic-description">Comprehensive preparation for the MBBS entrance exam.</div>
+                    <a href="" class="enroll-btn">Enroll Now</a>
+                </div>
             </div>
+        
     
             <!-- Complete BDS Entrance -->
             <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
                 <img src="course_picture/BDS_Entrance.png" alt="BDS Entrance">
                 <div class="topic-title">Complete BDS Entrance</div>
                 <div class="topic-description">Thorough preparation for the BDS entrance examination.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+                </div>
             </div>
     
              <!-- Complete B-Pharma Entrance  -->
@@ -224,7 +258,9 @@
                 <img src="course_picture/B-Pharma_entrance.jpg" alt="B-Pharma Entrance">
             <div class="topic-title">Complete B-Pharma Entrance Course</div>
             <div class="topic-description">Comprehensive preparation for B-Pharma entrance exams.</div>
+            <a href="" class="enroll-btn">Enroll Now</a>
         </div>
+    </div>
              
         <!-- Complete C-MAT -->
             <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
@@ -232,13 +268,17 @@
                 </a>
                 <div class="topic-title">Complete C-MAT</div>
                 <div class="topic-description">Ace the Common Management Admission Test (CMAT).</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
             </div>
+         </div>
     
             <!-- Complete Nursing Entrance -->
             <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
                 <img src="course_picture/Nursing_Entrance.jpg" alt="Nursing Entrance">
                 <div class="topic-title">Complete Nursing Entrance</div>
                 <div class="topic-description">Prepare thoroughly for the Nursing entrance examination.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- Complete Physics -->
@@ -246,13 +286,18 @@
                     <img src="course_picture/Physics.jpg" alt="Physics">
                 <div class="topic-title">Complete Physics Course</div>
                 <div class="topic-description">Comprehensive physics course for students.</div>
+            
+                <a href="" class="enroll-btn">Enroll Now</a>
             </div>
+        </div>
     
             <!-- Complete Chemistry -->
             <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
                     <img src="course_picture/CHemistry.jpg" alt="Chemistry">
                 <div class="topic-title">Complete Chemistry Course</div>
                 <div class="topic-description">In-depth chemistry course for aspiring chemists.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- Complete Zoology -->
@@ -260,6 +305,8 @@
                     <img src="course_picture/Biology.jpg" alt="Zoology">
                 <div class="topic-title">Complete Zoology Course</div>
                 <div class="topic-description">Full-length Zoology course for entrance exams.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- Complete Botany -->
@@ -267,12 +314,16 @@
                     <img src="course_picture/Botany.png" alt="Botany">
                 <div class="topic-title">Complete Botany Course</div>
                 <div class="topic-description">Full-length Botany course for entrance exams.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
             <!-- CAP-I -->
             <div class="gallery-item" onclick="showMessage('bdsentrance.html')">
                     <img src="caimage/CAP-I.jpg" alt="CAP-I">
                 <div class="topic-title">CAP-I</div>
                 <div class="topic-description">Complete detailed course of CAP-I.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- CAP-II -->
@@ -280,6 +331,8 @@
                     <img src="caimage/CAP-II.jpg" alt="CAP-II">
                 <div class="topic-title">CAP-II</div>
                 <div class="topic-description">Complete detailed course of CAP-II.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- CAP-III -->
@@ -287,6 +340,8 @@
                     <img src="caimage/CAP-III.jpg" alt="CAP-III">
                 <div class="topic-title">CAP-III</div>
                 <div class="topic-description">Complete detailed course of CAP-III.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- Class 11 (science) -->
@@ -294,6 +349,8 @@
                     <img src="class 11.png" alt="Class 11 (science)">
                 <div class="topic-title">Complete Class 11 (Science) Course</div>
                 <div class="topic-description">Enhance your class-11 with us.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     
             <!-- Class 12 (science) -->
@@ -301,10 +358,11 @@
                     <img src="Class 12.jpg" alt="Class 12 (science)">
                 <div class="topic-title">Complete Class 12 (Science) Course</div>
                 <div class="topic-description">Enhance your class-12 with us.</div>
+                <a href="" class="enroll-btn">Enroll Now</a>
+            </div>
             </div>
     </div>
 </div>
-
     <script>
         // JavaScript to show/hide sidebar when clicking the hamburger symbol
         const hamburger = document.querySelector('.hamburger');
