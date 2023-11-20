@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vector Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    #question-container {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 2px solid #000; /* Added black border */
+      max-width: 600px; /* Adjusted maximum width */
+      margin: 0 auto; /* Center the box horizontally */
+    }
+
+    #question {
+      font-size: 28px; /* Increased font size of the question */
+      margin-bottom: 20px;
+    }
+
+    #question-number {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    #options-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .option {
+      margin: 10px 0;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #000; /* Added border around the options */
+      width: 300px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .option:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+    }
+
+    .correct {
+      color: #008000;
+      font-weight: bold;
+    }
+
+    .wrong {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #next-btn:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 500px) {
+      .option {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="question-container">
+      <p id="question-number"></p>
+      <h2 id="question"></h2>
+      <div id="options-container"></div>
+      <p id="result"></p>
+      <button id="next-btn" style="display: none;">Next</button>
+      <button id="back-btn" style="display: none;">Back to Question Bank</button>
+    </div>
+    
+    <script>
+      const questions = [
+        
+        
+      {
+          question: 'A football player is moving southward and suddenly turns eastward with the same speed to avoid an opponent.The force that acts on the Player while turning is ',
+          options: ['Along north-ward', 'Along north-east', 'Along south-west', 'along east-ward'],
+          answer: 'Along north-east'
+        },
+        {
+          question: 'A man goes 10 KM/hr east and 20 km/hr north. Find the relative velocity.',
+          options: ['22.46Km/hr', '22.36km/hr', '24.36km/hr', '22.56km/hr'],
+          answer: '22.36km/hr'
+        },
+        {
+          question: 'Two vector "A=5i+7j-3k" and "B=2i+2j-ak" are perpendicular to each other, then find the value of "a" ',
+          options: ['12', '-12', '8', '-8'],
+          answer: '-8'
+        },
+        {
+          question: 'The resultant of two force 3P and 2P is R. If the first force is doubled then, the resulatnat is also doubled. The angle between the force is ',
+          options: ['45', '90', '60', '120'],
+          answer: '120'
+        },
+        {
+          question: 'A vector remains unchanged ',
+          options: ['When it is rotated by an arbitray angle',
+           'When it is cross multiplied by a unit vetor',
+            'When it is multiplied by scalar',
+             'When it is slided parallel to iteself'],
+          answer:'When it is slided parallel to iteself'
+        },
+        {
+          question: 'The sum of two unit vector is a unit vector. Then their difference is ',
+          options: ['2', '\u221a3', '\u221a 2', 'zero'],
+          answer:'\u221a3'
+        },
+        {
+          question: 'Which set of forces acting on a body never produces zero acceleration?',
+          options: ['10 N, 10 N, 20 N', '6 N, 8 N, 10 N', '7 N, 12 N, 20 N', '1 N, 2 N, 3 N'],
+          answer: '7 N, 12 N, 20 N'
+        },
+        {
+          question: 'The vector projection of a vector "3i+4K" on y-axis is ',
+          options: ['5', '4', '3', 'zero'],
+          answer: 'zero'
+        },{
+          question: 'A particle is simultaneously acted by two force equal to 4N and 3N. The net force on the particle is   ',
+          options: ['7N', '5N', '1N', 'Between 1N and 7N'],
+          answer: 'Between 1N and 7N'
+        },{
+          question: 'A plane is revolving around the earth with the speed of 100km/hr at a constant height from the surface of earth. The change in the velocity as it travels half circle is',
+          options: ['200km/hr', '150km/hr', '150km/hr', '0km/hr'],
+          answer: '200km/hr'
+        },{
+          question: 'Two force F1= 5i+10j-20kand F2=10i-5j-15k acts on a single point. The angle between F1 and F2 is nearly',
+          options: ['30', '45', '60', '90'],
+          answer: '45'
+        },{
+          question: 'The vector sum of two force is perpendicular to their vector differences. In that cases, the forces',
+          options: ['Are equal to each other magnitude',
+           'Are not equal to each other magnitude', 
+           'Cannot be predicted', 
+           'Are equal to each other'],
+          answer: 'Are equal to each other magnitude'
+        },{
+          question: 'A particle moves from position 3i+2J-6k to 14i+13j+9k due to a uniform force of (4i+j+3k)N. If the displacement in the meters then the work done will be ',
+          options: ['100j', '200j', '300j', '250j'],
+          answer: '100j'
+        },{
+          question: 'The angle between the vector A and B is (Theta). The value of the triple product A(BxA) is ',
+          options: ['AB', 'AB^2', 'A^2B', 'Zero'],
+          answer: 'Zero'
+        },{
+          question: 'If |AxB|=|A.B|, then angle between A vector and B vector is ',
+          options: ['30', '45', '60', '90'],
+          answer: '45'
+        },{
+          question: 'Find the torque of a force (F=-3i+j+5k) acting at the point (r=7i+3j+k)',
+          options: ['(14i-38j+16k)', '(4i+4j+6k)', '(21i+4j+4k)', '-14i+34j-16k'],
+          answer: '(14i-38j+16k)'
+        },{
+          question: 'A force applied on a mass is represented as (F=6i-8j+10k) and accelerates with 1m/. what will be the mass of the bosy in kg.',
+          options: ['10\u221a2', '20', '2\u221a10', '10'],
+          answer: '10\u221a2'
+        },
+        {
+          question: 'Two adjacent side of a parallelogram are represented by the two vectors "i+2j+3k" and "3i-2j+k". What is the area of parallelogram.',
+          options: ['8', '8\u221a3', '3\u221a8', '192'],
+          answer: '8\u221a3'
+        },
+       
+                
+      ];
+  
+      let currentQuestion = 0;
+
+const questionEl = document.getElementById('question');
+const questionNumberEl = document.getElementById('question-number');
+const optionsContainerEl = document.getElementById('options-container');
+const resultEl = document.getElementById('result');
+const nextBtn = document.getElementById('next-btn');
+const backBtn = document.getElementById('back-btn');
+
+function shuffleOptions(options) {
+  for (let i = options.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [options[i], options[j]] = [options[j], options[i]];
+  }
+  return options;
+}
+
+function shuffleQuestions() {
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+}
+
+function displayQuestion() {
+  const current = questions[currentQuestion];
+  questionEl.textContent = current.question;
+  questionNumberEl.textContent = `Question ${currentQuestion + 1}/${questions.length}`;
+
+  optionsContainerEl.innerHTML = '';
+  const shuffledOptions = shuffleOptions([...current.options]);
+  shuffledOptions.forEach((option) => {
+    const optionEl = document.createElement('div');
+    optionEl.textContent = option;
+    optionEl.classList.add('option');
+    optionEl.addEventListener('click', () => checkAnswer(option));
+    optionsContainerEl.appendChild(optionEl);
+  });
+
+  resultEl.textContent = '';
+  nextBtn.style.display = 'none';
+}
+
+function checkAnswer(selectedOption) {
+  const current = questions[currentQuestion];
+  const correctAnswer = current.answer;
+
+  const options = optionsContainerEl.getElementsByClassName('option');
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].textContent === selectedOption) {
+      if (selectedOption === correctAnswer) {
+        options[i].classList.add('correct');
+      } else {
+        options[i].classList.add('wrong');
+      }
+    }
+    if (options[i].textContent === correctAnswer) {
+      options[i].classList.add('correct');
+    }
+  }
+
+  if (selectedOption === correctAnswer) {
+    resultEl.textContent = 'Correct answer!';
+    resultEl.classList.add('correct');
+  } else {
+    resultEl.textContent = 'Wrong answer. Correct answer is: ' + correctAnswer;
+    resultEl.classList.add('wrong');
+  }
+
+  nextBtn.style.display = 'block';
+}
+
+nextBtn.addEventListener('click', () => {
+  resultEl.textContent = '';
+  resultEl.classList.remove('correct', 'wrong');
+
+  const options = optionsContainerEl.getElementsByClassName('option');
+  for (let i = 0; i < options.length; i++) {
+    options[i].classList.remove('correct', 'wrong');
+  }
+
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    displayQuestion();
+  } else {
+    questionEl.textContent = 'Quiz completed!';
+    optionsContainerEl.innerHTML = '';
+    nextBtn.style.display = 'none';
+    backBtn.style.display = 'block';
+  }
+});
+
+backBtn.addEventListener('click', () => {
+  window.location.href = 'questionbank.html'; // Redirect to questionbank.html
+});
+
+shuffleQuestions();
+displayQuestion();
+</script>
+</body>
+</html>

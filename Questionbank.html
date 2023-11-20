@@ -5,7 +5,7 @@
   <title>Quiz Topics</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    body {
+   body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
@@ -27,6 +27,7 @@
       margin-bottom: 30px;
       color: #333;
     }
+
 
     .topics, .subtopics {
       display: flex;
@@ -61,142 +62,181 @@
       color: #000;
     }
 
-    .subtopic i {
-      color: #0d0d0e;
+     /* Styles for sub-subtopics */
+     .subsubtopics {
+      display: none;
+      position: absolute;
+      top:480px;
+      left: 530px; /* Position to the right of the sub-topic */
+      width: 180px;
     }
-     /* Left arrow styles */
-     .left-arrow {
+
+    .subsubtopic {
+      border: 2px solid #e74c3c;
+      padding: 15px;
+      width: 290px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      font-size: 1.1em;
+      color: #e74c3c;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .subsubtopic:hover {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+
+    .subsubtopic i {
+      margin-right:-100px;
+      color: #fff;
+    }
+     /* Header styles */
+     .header {
+            background-color: #0abe0a;
+            color: #f1ebeb;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
+        }
+
+        /* Left arrow styles */
+        .left-arrow {
             position: absolute;
             top: 10px;
             left: 10px;
             font-size: 24px;
-            color: #0c0c0c;
+            color: #fff;
             text-decoration: none;
         }
+        h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #faf6f6;
+    }
   </style>
 </head>
 <body>
-   
+   <!-- Header -->
+   <div class="header">
+    <a class="left-arrow" href="sidebar.html">&#8592;</a> <!-- Left-facing arrow -->
+    <h2 class="title">Question Bank</h2>
+</div>
   <div class="container">
-     <!-- Left Arrow in Top-Left Corner -->
-     <a class="left-arrow" href="sidebar.html">&#8592;</a> <!-- Left-facing arrow -->
     <h1>Choose a Quiz Topic</h1>
     <div class="topics">
-      <div class="topic" onclick="toggleSubtopics('physicsSubtopics')">
-        <span>Physics</span>
-        <i class="fas fa-plus"></i>
+        <div class="topic" onclick="toggleSubtopics('physicsSubtopics')">
+          <span>Physics</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="topic" onclick="toggleSubtopics('chemistrySubtopics')">
+          <span>Chemistry</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="topic" onclick="toggleSubtopics('zoologySubtopics')">
+          <span>Zoology</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="topic" onclick="toggleSubtopics('botanySubtopics')">
+          <span>Botany</span>
+          <i class="fas fa-plus"></i>
+        </div>
       </div>
-      <div class="topic" onclick="toggleSubtopics('chemistrySubtopics')">
-        <span>Chemistry</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="topic" onclick="toggleSubtopics('zoologySubtopics')">
-        <span>Zoology</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="topic" onclick="toggleSubtopics('botanySubtopics')">
-        <span>Botany</span>
-        <i class="fas fa-plus"></i>
+      <div class="subtopics" id="physicsSubtopics" style="display: none;">
+        <!-- Physics Subtopics -->
+        <div class="subtopic" onclick="toggleSubsubtopics('mechanicsSubtopics')">
+          <span>Mechanics</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="subtopic" onclick="toggleSubsubtopics('Heat and Thermodynamics')">
+          <span>Heat and Thermodynamics</span>
+          <i class="fas fa-plus"></i>
+        </div> 
+        <div class="subtopic" onclick="toggleSubsubtopics('Wave and optics')">
+          <span>Wave and optics</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="subtopic" onclick="toggleSubsubtopics('Current and Electricity')">
+          <span>Current and Electricity</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="subtopic" onclick="toggleSubsubtopics('Magnetisim')">
+          <span>Magnetisim</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="subtopic" onclick="toggleSubsubtopics('modern-Physics')">
+          <span>modern-Physics</span>
+          <i class="fas fa-plus"></i>
+        </div>
+      <div class="subsubtopics" id="mechanicsSubtopics" style="display: none;">
+        <div class="subsubtopic" onclick="redirect('Physical_Quantities.html')">
+          <span>Physical quantities</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        
+            <div class="subsubtopic" onclick="redirect('vector_question.html')">
+              <span>Vector</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Motion in one dimension')">
+              <span>Motion in one dimension</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Newton\'s law of motion')">
+              <span>Newton's law of motion</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Friction')">
+              <span>Friction</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Circular motion')">
+              <span>Circular motion</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Work energy and power')">
+              <span>Work energy and power</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Gravitational')">
+              <span>Gravitational</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Rotational Mechanics')">
+              <span>Rotational Mechanics</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Periodic motion')">
+              <span>Periodic motion</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Elasticity')">
+              <span>Elasticity</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="subsubtopic" onclick="startQuiz('Fluid Mechanics')">
+              <span>Fluid Mechanics</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <!-- Add more subsubtopics under Mechanics -->
+          </div>
+          
       </div>
     </div>
-    <div class="subtopics" id="physicsSubtopics" style="display: none;">
-      <!-- Physics Subtopics -->
-      <div class="subtopic" onclick="startQuiz('Mechanics')">
-        <span>Mechanics</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Heat and Thermodynamics')">
-        <span>Heat and Thermodynamics</span>
-        <i class="fas fa-plus"></i>
-      </div> 
-      <div class="subtopic" onclick="startQuiz('Wave and optics')">
-        <span>Wave and optics</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Current and Electricity')">
-        <span>Current and Electricity</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Magnetisim')">
-        <span>Magnetisim</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('modern-Physics')">
-        <span>modern-Physics</span>
-        <i class="fas fa-plus"></i>
-      </div>
-    </div>
-    <div class="subtopics" id="chemistrySubtopics" style="display: none;">
-      <!-- Chemistry Subtopics -->
-      <div class="subtopic" onclick="startQuiz('Physical Chemistry')">
-        <span>Physical Chemistry</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Inorganic Chemistry')">
-        <span>Inorganic Chemistry</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Organic Chemistry')">
-        <span>Organic Chemistry</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <!-- Add more chemistry sub-topics here if needed -->
-    </div>
-    <div class="subtopics" id="zoologySubtopics" style="display: none;">
-      <!-- Zoology Subtopics -->
-      <div class="subtopic" onclick="startQuiz('Origin and Evolution')">
-        <span>Origin and Evolution</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Phylum')">
-        <span>Phylum</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Biology of the Following')">
-        <span>Biology of the Following</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Human system')">
-        <span>Human system</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Animal behavior')">
-        <span>Animal behavior</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Animal adaptation')">
-        <span>Animal adaptation</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <!-- Add more zoology sub-topics here if needed -->
-    </div>
-    <div class="subtopics" id="botanySubtopics" style="display: none;">
-      <!-- Botany Subtopics -->
-      <div class="subtopic" onclick="startQuiz('Basic Biodiversity')">
-        <span>Basic Biodiversity</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Cell Biology and Genetics')">
-        <span>Cell Biology and Genetics</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Plant Anatomy and Physiology')">
-        <span>Plant Anatomy and Physiology</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <div class="subtopic" onclick="startQuiz('Bio-technology')">
-        <span>Bio-technology</span>
-        <i class="fas fa-plus"></i>
-      </div>
-      <!-- Add more botany sub-topics here if needed -->
-    </div>
+    <!-- Add subtopics and sub-subtopics for other main topics -->
+
   </div>
 
   <script>
     function startQuiz(topic) {
       alert('Starting ' + topic + ' Quiz!');
-      // You can implement logic to start a quiz for the selected topic here
-      // window.location.href = 'quiz_' + topic.toLowerCase().replace(/ /g, '_') + '.html';
+      // Logic to start the quiz for the selected sub-subtopic
     }
 
     function toggleSubtopics(id) {
@@ -206,6 +246,19 @@
       } else {
         subtopics.style.display = 'none';
       }
+    }
+
+    function toggleSubsubtopics(id) {
+      const subsubtopics = document.getElementById(id);
+      if (subsubtopics.style.display === 'none') {
+        subsubtopics.style.display = 'block';
+      } else {
+        subsubtopics.style.display = 'none';
+      }
+    }
+
+    function redirect(page) {
+      window.location.href = page;
     }
   </script>
 </body>
