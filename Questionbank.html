@@ -719,39 +719,39 @@
         <i class="fas fa-plus"></i>
       </div>
     </div> 
-   <script>
-    function startQuiz(topic) {
-      alert('Starting ' + topic + ' Quiz!');
-      // Logic to start the quiz for the selected sub-subtopic
-    }
-
-    function toggleSubtopics(id) {
-  const subtopics = document.getElementsByClassName('subtopics');
-  for (let i = 0; i < subtopics.length; i++) {
-    if (subtopics[i].id === id) {
-      subtopics[i].style.display = 'block';
-    } else {
-      subtopics[i].style.display = 'none';
-    }
-  }
-}
-
-function toggleSubsubtopics(id) {
-  const subsubtopics = document.getElementsByClassName('subsubtopics');
-  for (let i = 0; i < subsubtopics.length; i++) {
-    if (subsubtopics[i].id === id) {
-      subsubtopics[i].style.display = 'block';
-    } else {
-      subsubtopics[i].style.display = 'none';
-    }
-  }
-}
-
-function redirect(page) {
-  window.location.href = page;
-}
-
-  </script>
+    <script>
+      function startQuiz(topic) {
+        alert('Starting ' + topic + ' Quiz!');
+        // Logic to start the quiz for the selected sub-subtopic
+      }
+    
+      function toggleSubtopics(id) {
+        const subtopics = document.getElementsByClassName('subtopics');
+        for (let i = 0; i < subtopics.length; i++) {
+          if (subtopics[i].id === id) {
+            subtopics[i].style.display = subtopics[i].style.display === 'block' ? 'none' : 'block';
+          } else {
+            subtopics[i].style.display = 'none';
+          }
+        }
+      }
+    
+      function toggleSubsubtopics(id) {
+        const subsubtopics = document.getElementsByClassName('subsubtopics');
+        for (let i = 0; i < subsubtopics.length; i++) {
+          if (subsubtopics[i].id === id) {
+            subsubtopics[i].style.display = subsubtopics[i].style.display === 'block' ? 'none' : 'block';
+          } else {
+            subsubtopics[i].style.display = 'none';
+          }
+        }
+      }
+    
+      function redirect(page) {
+        window.location.href = page;
+      }
+    </script>
+    
 <!-- Code injected by live-server -->
 <script>
 	// <![CDATA[  <-- For SVG support
