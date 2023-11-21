@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motion in one dimension Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    #question-container {
+      text-align: center;
+      margin-top: 50px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 2px solid #000; /* Added black border */
+      max-width: 600px; /* Adjusted maximum width */
+      margin: 0 auto; /* Center the box horizontally */
+    }
+
+    #question {
+      font-size: 28px; /* Increased font size of the question */
+      margin-bottom: 20px;
+    }
+
+    #question-number {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    #options-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .option {
+      margin: 10px 0;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #000; /* Added border around the options */
+      width: 300px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .option:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+    }
+
+    .correct {
+      color: #008000;
+      font-weight: bold;
+    }
+
+    .wrong {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #next-btn:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 500px) {
+      .option {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="question-container">
+      <p id="question-number"></p>
+      <h2 id="question"></h2>
+      <div id="options-container"></div>
+      <p id="result"></p>
+      <button id="next-btn" style="display: none;">Next</button>
+      <button id="back-btn" style="display: none;">Back to Question Bank</button>
+    </div>
+    
+    <script>
+      const questions = [
+      {
+          question: 'A particle is moving with the velocity 180km/hr, then the distance travelled by it in 10 sec is ',
+          options: ['0.5cm', '5m', '50m', '500m'],
+          answer: '500m'
+        }, {
+          question: ' A vehicle travels half the distance with the speed "v" and the remaining distance with the speed "2v".Its average speed is ',
+          options: ['2v/3', '4v/3', '3v/4', 'v/3'],
+          answer: '4v/3'
+        }, {
+          question: 'A horizontal bridge is built across a river. A student standing on the bridge throws a small ball vertically upward with a velocity 4m/s. The ball strike the water surface after 4s. The height of bridge above the water surface is (Take g=10m/s^2) ',
+          options: ['60m', '64m', '68m', '56m'],
+          answer: '64m'
+        }, {
+          question: 'The ratio of the distance travelled by a freely falling body in the 1st,2nd, 3rd and 4th second is  ',
+          options: ['1:2:3:4', '1:4:9:16', '1:3:5:7', '1:1:1:1'],
+          answer: '1:3:5:7'
+        }, {
+          question: 'A boy started his journey from home to school which 16km far at unifrom speed 2.5km/hr and while returning, he returned with 4km/hr. What is his average speed? ',
+          options: ['3km/hr', '4km/hr', '6km/hr', '8km/hr'],
+          answer: '3km/hr'
+        }, {
+          question: 'A person on a moving train throws upward a coin, and if it falls behind him, then the train is  ',
+          options: ['Accelerating', 'Decelerating ', 'Moving with constant Velocity', 'All'],
+          answer: 'Accelerating'
+        }, {
+          question: 'A man intends to cross a river on a boat with velocity 4m/s. If resultant velocity of a boat is 5m/s. Then velocity of river is : ',
+          options: ['3m/s', '3\u221a2m/s', '4m/s', '5\u221a2m/s'],
+          answer: '3m/s'
+        }, {
+          question: ' The slope of a velocity-time graph gives',
+          options: ['Acceleration', 'Displacement', 'unifrom speed', 'Stationary object'],
+          answer: 'Acceleration'
+        }, {
+          question: 'Two bodies, one held 1m above the other directly, are released simultaneously and fall freely under gravity. After 3 second their relative sepration will be  ',
+          options: ['0.98m', '1m', '4.9m', '9.8m'],
+          answer: '1m'
+        }, {
+          question: 'Time taken by a train of length 150m and travelling with a unifrom velocity of 60km/hr to cross completely a bridgr of length 1.5km will be ',
+          options: ['9s', '9.9s', '90s', '99s'],
+          answer: '99s'
+        }, {
+          question: 'A body is thrown vertically upward and attains a velocity 15m/s at half the maxium height. The maximum height up to the body can reach will be: ',
+          options: ['45.8m', '34.5m', '22.9m', '17.8m'],
+          answer: '22.9m'
+        }, {
+          question: 'Two bodies of mass "2m" and "m" are released from height "2H" and "H" respectively. The ratio of time taken by them to reach the ground is: ',
+          options: ['1/4', '1', '\u221a2', '2'],
+          answer: '\u221a2'
+        }, {
+          question: 'A body of mass 200gm is thrown upward with inital velocity of 30m/s. What is total energy of body at height of 20m form ground? ',
+          options: ['50j', '100j', '40j', '90j'],
+          answer: '90j'
+        }, {
+          question: 'A body travels with velocity 30m/s for the first half of the time and with velocity 40m/s for second half of time what would be average velocity ',
+          options: ['50m/s', '35m/s', '40m/s', '30m/s'],
+          answer: '35m/s'
+        }, {
+          question: 'A car travelling along circular track at constant constant speed 20m/s has completed half revolution on the track. Its average velocity will be  ',
+          options: ['10piem/s','20/pie m/s', '20m/s', '40/pie m/s'],
+          answer: '40/pie m/s'
+        }, {
+          question: 'A car accelerates from rest at constant rate for the first 10second and covers a distance x. It covers a distance y in the next 10 second at the same acceleration. which relation is true? ',
+          options: ['y=3x', 'x=3y', 'x=y', 'y=2x'],
+          answer: 'y=3x'
+        }, {
+          question: 'A body is thrown up vertically upward attains a maximum height H. while moving upward if it covers first 3H/4 Distance from the ground in time T, then time taken to cover remaining distace H/4 will be:',
+          options: ['T/2', 'T', 'T/3', '3T/2'],
+          answer: 'T'
+        }, {
+          question: 'When a ball s thrown upward with air resistance not neglected, it takes 10 second to reach a height. It then returns to ground in time',
+          options: ['8.2s', '6s', '10s', '12.4s'],
+          answer: '12.4s'
+        }, {
+          question: 'A ball thrown vertically upward covers equal distance in its fourth and fifth second. Then inital velocity of projection will be ',
+          options: ['20m/s', '40m/s', '25m/s', '50m/s'],
+          answer: '40m/s'
+        }, {
+          question: 'A car moving with a speed of 40km/hr can be stopped by applying brakes after at least 2m. If the same car is moving with a speed of 80km/hr, the minimum stopping distance is ',
+          options: ['8m', '2m', '4m', '6m'],
+          answer: '8m'
+        }, {
+          question: 'A stone is dropped from the top of a tower of height "h".It reaches the ground in "t" secs. The poistion of the stone after t/3 secs. will be ....... from the ground',
+          options: ['(3/4)h', 'h/9', '(8/9)h', '(1/4)h'],
+          answer: '(8/9)h'
+        }, {
+          question: 'A person who can swim at 12km/hr in still wants to cross a river flowing at 6km/hr along shortest route. Then he has to start swimming at  ',
+          options: ['60 with stream', '90 with the stream', '', ''],
+          answer: ''
+        }, 
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+            
+      ];
+  
+      let currentQuestion = 0;
+
+const questionEl = document.getElementById('question');
+const questionNumberEl = document.getElementById('question-number');
+const optionsContainerEl = document.getElementById('options-container');
+const resultEl = document.getElementById('result');
+const nextBtn = document.getElementById('next-btn');
+const backBtn = document.getElementById('back-btn');
+
+function shuffleOptions(options) {
+  for (let i = options.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [options[i], options[j]] = [options[j], options[i]];
+  }
+  return options;
+}
+
+function shuffleQuestions() {
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+}
+
+function displayQuestion() {
+  const current = questions[currentQuestion];
+  questionEl.textContent = current.question;
+  questionNumberEl.textContent = `Question ${currentQuestion + 1}/${questions.length}`;
+
+  optionsContainerEl.innerHTML = '';
+  const shuffledOptions = shuffleOptions([...current.options]);
+  shuffledOptions.forEach((option) => {
+    const optionEl = document.createElement('div');
+    optionEl.textContent = option;
+    optionEl.classList.add('option');
+    optionEl.addEventListener('click', () => checkAnswer(option));
+    optionsContainerEl.appendChild(optionEl);
+  });
+
+  resultEl.textContent = '';
+  nextBtn.style.display = 'none';
+}
+
+function checkAnswer(selectedOption) {
+  const current = questions[currentQuestion];
+  const correctAnswer = current.answer;
+
+  const options = optionsContainerEl.getElementsByClassName('option');
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].textContent === selectedOption) {
+      if (selectedOption === correctAnswer) {
+        options[i].classList.add('correct');
+      } else {
+        options[i].classList.add('wrong');
+      }
+    }
+    if (options[i].textContent === correctAnswer) {
+      options[i].classList.add('correct');
+    }
+  }
+
+  if (selectedOption === correctAnswer) {
+    resultEl.textContent = 'Correct answer!';
+    resultEl.classList.add('correct');
+  } else {
+    resultEl.textContent = 'Wrong answer. Correct answer is: ' + correctAnswer;
+    resultEl.classList.add('wrong');
+  }
+
+  nextBtn.style.display = 'block';
+}
+
+nextBtn.addEventListener('click', () => {
+  resultEl.textContent = '';
+  resultEl.classList.remove('correct', 'wrong');
+
+  const options = optionsContainerEl.getElementsByClassName('option');
+  for (let i = 0; i < options.length; i++) {
+    options[i].classList.remove('correct', 'wrong');
+  }
+
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    displayQuestion();
+  } else {
+    questionEl.textContent = 'Quiz completed!';
+    optionsContainerEl.innerHTML = '';
+    nextBtn.style.display = 'none';
+    backBtn.style.display = 'block';
+  }
+});
+
+backBtn.addEventListener('click', () => {
+  window.location.href = 'questionbank.html'; // Redirect to questionbank.html
+});
+
+shuffleQuestions();
+displayQuestion();
+</script>
+</body>
+</html>
