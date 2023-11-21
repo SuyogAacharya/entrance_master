@@ -12,15 +12,7 @@
       background-color: #f7f7f7;
     }
 
-    .container {
-      max-width: 800px;
-      max-height: 2500px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+    
 
     h1 {
       font-size: 2.5em;
@@ -66,8 +58,8 @@
      .subsubtopics {
       display: none;
       position: absolute;
-      top:650px;
-      left: 530px; /* Position to the right of the sub-topic */
+      top: 350px;
+      left: 250px; /* Position to the right of the sub-topic */
       width: 180px;
     }
 
@@ -83,8 +75,9 @@
       text-transform: uppercase;
       margin-bottom: 15px;
       display: flex;
-      align-items: center;
+      align-items: left;
       justify-content: space-between;
+      
     }
 
     .subsubtopic:hover {
@@ -702,33 +695,38 @@
         <i class="fas fa-plus"></i>
       </div>
     </div> 
-  <script>
+   <script>
     function startQuiz(topic) {
       alert('Starting ' + topic + ' Quiz!');
       // Logic to start the quiz for the selected sub-subtopic
     }
 
     function toggleSubtopics(id) {
-      const subtopics = document.getElementById(id);
-      if (subtopics.style.display === 'none') {
-        subtopics.style.display = 'block';
-      } else {
-        subtopics.style.display = 'none';
-      }
+  const subtopics = document.getElementsByClassName('subtopics');
+  for (let i = 0; i < subtopics.length; i++) {
+    if (subtopics[i].id === id) {
+      subtopics[i].style.display = 'block';
+    } else {
+      subtopics[i].style.display = 'none';
     }
+  }
+}
 
-    function toggleSubsubtopics(id) {
-      const subsubtopics = document.getElementById(id);
-      if (subsubtopics.style.display === 'none') {
-        subsubtopics.style.display = 'block';
-      } else {
-        subsubtopics.style.display = 'none';
-      }
+function toggleSubsubtopics(id) {
+  const subsubtopics = document.getElementsByClassName('subsubtopics');
+  for (let i = 0; i < subsubtopics.length; i++) {
+    if (subsubtopics[i].id === id) {
+      subsubtopics[i].style.display = 'block';
+    } else {
+      subsubtopics[i].style.display = 'none';
     }
+  }
+}
 
-    function redirect(page) {
-      window.location.href = page;
-    }
+function redirect(page) {
+  window.location.href = page;
+}
+
   </script>
 <!-- Code injected by live-server -->
 <script>
