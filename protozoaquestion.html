@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protozoa question</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    #question-container {
+      text-align: center;
+      margin-top: 50px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 2px solid #000; /* Added black border */
+      max-width: 600px; /* Adjusted maximum width */
+      margin: 0 auto; /* Center the box horizontally */
+    }
+
+    #question {
+      font-size: 28px; /* Increased font size of the question */
+      margin-bottom: 20px;
+    }
+
+    #question-number {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    #options-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .option {
+      margin: 10px 0;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #000; /* Added border around the options */
+      width: 300px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .option:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+    }
+
+    .correct {
+      color: #008000;
+      font-weight: bold;
+    }
+
+    .wrong {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #next-btn:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 500px) {
+      .option {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="question-container">
+      <p id="question-number"></p>
+      <h2 id="question"></h2>
+      <div id="options-container"></div>
+      <p id="result"></p>
+      <button id="next-btn" style="display: none;">Next</button>
+      <button id="back-btn" style="display: none;">Back to Question Bank</button>
+    </div>
+    
+    <script>
+      const questions = [
+      
+        {
+          question: ' Unicellular eukaryotic microorganism compries:',
+          options: ['Fungi', 'Plants', 'Protista', 'none'],
+          answer: 'Protista'
+        }, 
+       
+        {
+          question: 'A protist dose not move with the help of ',
+          options: ['Cillia', 'Parapodia', 'flagella', 'pseudopodia'],
+          answer: 'Parapodia'
+        }, 
+        {
+          question: 'Phylum protista is classified on the basis of',
+          options: ['Reproduction', 'Habitat', 'Locomotion', 'Organization'],
+          answer: 'Reproduction'
+        }, 
+       
+        {
+          question: 'Which of the following is not unicelluar eukaryotes:',
+          options: ['Diatoms', 'Euglena', 'Dinoflagellates', 'None'],
+          answer: 'Dinoflagellates'
+        }, 
+         {
+          question: 'Example of bioluminescent protozoan:',
+          options: ['Paramecium', 'Pyorrhea', 'Opalina', 'Noctiluca'],
+          answer: 'Noctiluca'
+        }, 
+       
+        {
+          question: 'Creatium is a ',
+          options: ['Dinoflagellate', 'Diatoms', 'Slime moulds', 'Notes'],
+          answer: 'Dinoflagellate'
+        }, 
+         {
+          question: 'Red tide is caused by ',
+          options: ['Dinoflagellate', 'Diatoms', 'Slime moulds', 'None'],
+          answer: 'Dinoflagellate'
+        }, 
+       
+        {
+          question: 'Dinoflagellate have how many flagella?',
+          options: ['1', '2', '3', '1 or 2'],
+          answer: '2'
+        }, 
+         {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        },  {
+          question: '  ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        {
+          question: ' ',
+          options: ['', '', '', ''],
+          answer: ''
+        }, 
+       
+        
+            
+      ];
+  
+      let currentQuestion = 0;
+
+const questionEl = document.getElementById('question');
+const questionNumberEl = document.getElementById('question-number');
+const optionsContainerEl = document.getElementById('options-container');
+const resultEl = document.getElementById('result');
+const nextBtn = document.getElementById('next-btn');
+const backBtn = document.getElementById('back-btn');
+
+function shuffleOptions(options) {
+  for (let i = options.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [options[i], options[j]] = [options[j], options[i]];
+  }
+  return options;
+}
+
+function shuffleQuestions() {
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+}
+
+function displayQuestion() {
+  const current = questions[currentQuestion];
+  questionEl.textContent = current.question;
+  questionNumberEl.textContent = `Question ${currentQuestion + 1}/${questions.length}`;
+
+  optionsContainerEl.innerHTML = '';
+  const shuffledOptions = shuffleOptions([...current.options]);
+  shuffledOptions.forEach((option) => {
+    const optionEl = document.createElement('div');
+    optionEl.textContent = option;
+    optionEl.classList.add('option');
+    optionEl.addEventListener('click', () => checkAnswer(option));
+    optionsContainerEl.appendChild(optionEl);
+  });
+
+  resultEl.textContent = '';
+  nextBtn.style.display = 'none';
+}
+
+function checkAnswer(selectedOption) {
+  const current = questions[currentQuestion];
+  const correctAnswer = current.answer;
+
+  const options = optionsContainerEl.getElementsByClassName('option');
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].textContent === selectedOption) {
+      if (selectedOption === correctAnswer) {
+        options[i].classList.add('correct');
+      } else {
+        options[i].classList.add('wrong');
+      }
+    }
+    if (options[i].textContent === correctAnswer) {
+      options[i].classList.add('correct');
+    }
+  }
+
+  if (selectedOption === correctAnswer) {
+    resultEl.textContent = 'Correct answer!';
+    resultEl.classList.add('correct');
+  } else {
+    resultEl.textContent = 'Wrong answer. Correct answer is: ' + correctAnswer;
+    resultEl.classList.add('wrong');
+  }
+
+  nextBtn.style.display = 'block';
+}
+
+nextBtn.addEventListener('click', () => {
+  resultEl.textContent = '';
+  resultEl.classList.remove('correct', 'wrong');
+
+  const options = optionsContainerEl.getElementsByClassName('option');
+  for (let i = 0; i < options.length; i++) {
+    options[i].classList.remove('correct', 'wrong');
+  }
+
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    displayQuestion();
+  } else {
+    questionEl.textContent = 'Quiz completed!';
+    optionsContainerEl.innerHTML = '';
+    nextBtn.style.display = 'none';
+    backBtn.style.display = 'block';
+  }
+});
+
+backBtn.addEventListener('click', () => {
+  window.location.href = 'questionbank.html'; // Redirect to questionbank.html
+});
+
+shuffleQuestions();
+displayQuestion();
+</script>
+</body>
+</html>
