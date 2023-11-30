@@ -1,0 +1,645 @@
+.course-header {
+    padding-top: 32px;
+    background-color: var(--black);
+}
+.course-header-wrapper {
+    width: 65%;
+    position: relative;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: var(--green);
+    content: var(--bs-breadcrumb-divider, "/");
+}
+.breadcrumb-item a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.course-title {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0px;
+    margin-bottom: 8px;
+}
+.excert {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+.rating-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+}
+.average-rating {
+    color: gold;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+.rating-container i {
+    color: #fff;
+}
+.rating-container .voted {
+    color: gold;
+}
+.number-of-ratings {
+    color: var(--green);
+}
+.number-of-students {
+    color: #fff;
+}
+.sidebar-container {
+    width: 30%;
+    position: absolute;
+    top: 10rem;
+    right: 1rem;
+    margin: 0 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    border-bottom: 1px solid #d1d7dc;
+}
+
+.intro-video iframe {
+    width: 100%;
+}
+
+.purchase-section {
+    padding: 2rem;
+}
+.left-side-wrapper {
+    width: 65%;
+}
+
+/* //old css */
+
+.buy-now-btn {
+    display: block;
+    text-align: center;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0.5rem 0rem;
+    text-decoration: none;
+    transition: all;
+    width: 100%;
+}
+.buy-now-btn:hover {
+    background-color: var(--black);
+    color:var(--green);
+}
+
+.price {
+    line-height: 1;
+    margin: 0 -25px 0px -25px;
+    padding: 5px 25px 5px 25px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.original_price {
+    color: #3f9fff;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-left: 0px;
+}
+.original_price em {
+    text-decoration: line-through;
+    margin: 0 10px;
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+}
+
+/* course structure */
+
+/* old css start here  */
+.accordian {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 18%);
+}
+
+span {
+    padding-left: 15px;
+}
+
+.our-expertise h3 {
+    font-size: 1.5em;
+}
+
+.faq-container {
+    max-width: 1280px;
+    padding-bottom: 1.5em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.mobile-expertise-faq {
+    background-color: #f6f6f6;
+}
+
+p.mobile-faq-menu {
+    margin: auto;
+    padding: 10px 20px;
+    border-bottom: solid #eeeeee 1px;
+    background-color: var(--green);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.expertise-faq {
+    width: 95%;
+    display: inline-block;
+}
+
+.contact-faq {
+    background: #f3f3f3;
+    height: 1000px;
+    width: 375px;
+    display: inline-block;
+}
+
+
+
+/* Style the element that is used to open and close the accordion class */
+
+p.faq-accordion {
+    background-color: var(--black);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: 0px;
+    border-top: solid #f4f4f4 1px;
+    border-radius: 3px;
+}
+
+.sub-faq {
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 18%);
+}
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and  when you move the mouse over it (hover) */
+p.faq-accordion.active,
+p.accordion:hover {
+    background-color: #b61b1ba8;
+}
+
+/* Unicode character for "plus" sign (+) */
+p.faq-accordion:after {
+    content: "\2795";
+    font-size: 13px;
+    color: #fff;
+    float: right;
+    margin-left: 5px;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 0.1rem;
+}
+
+p.mobile-faq-menu:after {
+    content: "\2795";
+    font-size: 15px;
+    color: #ffffff !important;
+    float: right;
+    margin-left: 5px;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 0.1rem;
+}
+
+/* Unicode character for "minus" sign (-) */
+p.faq-accordion.active:after {
+    content: "\2796";
+}
+
+p.mobile-faq-menu.active:after {
+    content: "\2796";
+}
+
+/* Style the element that is used for the panel class */
+div.faq-panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 1;
+    text-align: left;
+    padding-left: 18px;
+    max-width: 100%;
+    /* // margin: 5px 0px; */
+}
+
+div.faq-panel.show {
+    opacity: 1;
+    max-height: 750px;
+    /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+
+div.mobile-faq-panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    text-align: left;
+    padding-left: 18px;
+    padding-right: 30px;
+}
+
+div.mobile-faq-panel.show {
+    opacity: 1;
+    max-height: fit-content;
+    /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+
+p.faq-panel {
+    display: flex;
+    justify-content: space-between;
+}
+.alert {
+    margin-bottom: 0rem;
+}
+.message {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.title-content {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.curriculum-stats {
+    display: flex;
+    margin-bottom: 0.7rem;
+}
+.curriculum-stats span {
+    padding-left: 0;
+    font-weight: 500;
+    color: var(--light-color);
+    padding-right: 0.3rem;
+}
+.bundle-course-description p {
+    margin-bottom: 0.5rem;
+}
+.include-title {
+    margin-top: 1rem;
+    display: block;
+    margin-bottom: 0.7rem;
+}
+.course-overview i {
+    padding-right: 1rem;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: #000000f5;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 90px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    height: 95vh;
+    overflow: auto;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--green);
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 40px;
+    right: 2rem;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+/* /custom plyr css  */
+
+/* Playlist  */
+/* scrollbar rules have to be separate, browsers not supporting this syntax will skip them when combined. */
+.plyr-playlist-wrapper ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.plyr-playlist-wrapper ul::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.plyr-playlist-wrapper ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    /*  background: #fff; */
+    background: #3498db;
+}
+.plyr-playlist-wrapper {
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    padding: 0.5em 0.5em 0.5em 0.25em;
+}
+.plyr-playlist-wrapper .plyr-playlist {
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* position: absolute;
+    right: 65px;
+    bottom: 100%; */
+    position: relative;
+    margin-top: 0;
+    padding: 6px 4px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 8px 0px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 8px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 8px 0px inset;
+}
+
+.plyr-playlist-wrapper ul {
+    padding: 0;
+    margin: 0;
+    max-height: 12em;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.plyr-playlist-wrapper ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.plyr-playlist-wrapper .plyr-playlist li {
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 0px;
+    margin-bottom: 3px;
+    font-size: 90%;
+}
+
+.plyr-playlist-wrapper .plyr-playlist li.pls-playing,
+.plyr-playlist-wrapper .plyr-playlist li:hover {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.09);
+}
+.plyr-playlist-wrapper .plyr-playlist li.pls-playing a {
+    color: #3498db;
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* .plyr-playlist li:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+  } */
+
+.plyr-playlist-wrapper .plyr-playlist li a {
+    text-decoration: none;
+    font-family: arial;
+    color: #c9c9c9;
+    display: block;
+    padding: 10px 0;
+    outline: none;
+    padding: 0.5em 0.25em 0.5em 0.75em;
+    /*margin-right: 0.5em;*/
+    font-size: 90%;
+    padding-bottom: 10px;
+}
+
+.plyr-playlist-wrapper .plyr-playlist li:last-child a {
+    border-bottom: 0;
+}
+
+.plyr-playlist li a:hover,
+.plyr-playlist li a:focus,
+.plyr-playlist li a:active {
+    color: #04a9f3;
+    /*  color: #00c85f;*/
+    /*   text-decoration: none; */
+}
+
+.plyr-miniposter {
+    width: auto;
+    height: 22px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    margin-right: 10px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+/*******************/
+
+.plyr-type-playlist plyr-playlist a.plyr-playlist-item-remove {
+    float: right;
+    margin-right: 15px;
+    /*font-weight: bold;*/
+    background-color: transparent;
+}
+
+/* PREVIOUS NEXT BUTTON */
+
+.plyr-prev {
+    margin-right: 0 !important;
+}
+.plyr-next {
+    margin-left: 0 !important;
+}
+.plyr__controls [data-plyr="play"] {
+    margin-left: 0 !important;
+}
+.course-header-mobile {
+    display: none;
+}
+.sub-chapter-with-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-chapter-with-detail span {
+    padding-left: 0;
+}
+.user-review-post-btn {
+    width: 100%;
+}
+
+/* media query  */
+
+@media (max-width: 900px) {
+    .course-header {
+        display: none;
+    }
+    .breadcrumb {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+    .container {
+        padding: 0;
+    }
+    .course-header-mobile {
+        display: block;
+    }
+    .single-course-overview {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .course-title {
+        color: #000;
+        font-size: 1.7rem;
+    }
+    .excert {
+        color: #000;
+        font-size: 1rem;
+    }
+    .number-of-students {
+        color: #000;
+    }
+    .purchase-section {
+        padding: 0;
+    }
+    .left-side-wrapper {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .curriculum-stats {
+        flex-direction: column;
+    }
+    .overlay-content {
+        top: 100px;
+        width: 90%;
+    }
+    .overlay .closebtn {
+        top: 25px;
+    }
+    .rating-container i {
+        color: #000;
+    }
+}
+
+.my-overlay {
+    background-color: #161515d1;
+    min-height: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1200;
+}
+
+.my-content {
+    width: 50%;
+    background: #fff;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+}
+
+.my-close-btn {
+    font-size: 2.6rem;
+    text-align: end;
+    cursor: pointer;
+}
+
+/* custom radio */
+.customRadio {
+    margin-bottom: 2rem;
+}
+.customRadio .price {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.customRadio .original_price {
+    font-size: 1rem;
+}
+.customRadio input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.customRadio input[type="radio"] + label {
+    position: relative;
+    padding: 3px 0 0 49px;
+    cursor: pointer;
+}
+
+.customRadio input[type="radio"] + label:before {
+    content: "";
+    background: #fff;
+    border: 2px solid green;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 37%;
+    left: 9px;
+}
+
+.customRadio input[type="radio"] + label:after {
+    content: "";
+    background: green;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 37%;
+    left: 9px;
+    opacity: 0;
+    transform: scale(2);
+    transition: transform 0.3s linear, opacity 0.3s linear;
+}
+
+.customRadio input[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+.customRadio input[type="radio"]:checked + .custom-row {
+    border: 1px solid green;
+}
+
+.custom-row {
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    border-radius: 9px;
+    margin-bottom: 1rem;
+}
