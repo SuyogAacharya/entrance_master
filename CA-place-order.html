@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="logo.jpg">
+  <title>Entrance Master|Order Confirmation</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    select,
+    input[type="file"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    .left-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #0f0f0f;
+            text-decoration: none;
+        }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      select,
+      input[type="file"],
+      input[type="submit"] {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="left-arrow" href="course-grid-3.html">&#8592;</a>
+
+</header>
+  <h1>Choose Your Course</h1>
+
+  <div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <label for="courseSelection">Choose Your Course:</label>
+      <select id="courseSelection" name="courseSelection">
+        <option value="none"></option>
+        <option value="CAP-I">CAP-I</option>
+        <option value="CAP-II">CAP-II</option>
+        <option value="CAP-III">CAP-III</option>
+      </select>
+    </form>
+  </div>
+      
+  <h2>Select Payment Method</h2>
+
+  <div class="container">
+    <form action="payment_process.php" method="post" enctype="multipart/form-data">
+      <label for="paymentMethod">Choose Payment Method:</label>
+      <select id="paymentMethod" name="paymentMethod">
+        <option value="none"></option>
+        <option value="esewa">Esewa</option>
+        <option value="bank">Bank</option>
+        <option value="khalti">Khalti</option>
+      </select>
+
+      <label for="photoUpload">Upload Photo:(MAX:2MB)</label>
+      <input type="file" id="photoUpload" name="photoUpload">
+
+      <input type="submit" value="Submit">
+    </form>
+    <div id="qrCodeDisplay" style="display: none;">
+      <img id="qrImage" src="" alt="QR Code" style="max-width: 100%;">
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('paymentMethod').addEventListener('change', function() {
+      var paymentMethod = this.value;
+      var qrImage = document.getElementById('qrImage');
+
+      if (paymentMethod === 'esewa') {
+        qrImage.src = 'esewaQR.jpg';
+      } else if (paymentMethod === 'bank') {
+        qrImage.src = 'bankqr.jpg';
+      } else if (paymentMethod === 'khalti') {
+        qrImage.src = 'khaltiqr.jpg';
+      }
+
+      if (paymentMethod !== 'none') {
+        document.getElementById('qrCodeDisplay').style.display = 'block';
+      } else {
+        document.getElementById('qrCodeDisplay').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
