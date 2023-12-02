@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-        <!-- Site Icons -->
-        <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="logo.jpg">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="logo.jpg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrance-Master|Course|</title>
+    <title>Entrance-Master|Chemistry-Gallery|</title>
     <style>
         /* Reset some default styles */
         body, h1, p {
@@ -14,7 +14,7 @@
             padding: 0;
         }
 
-        /* Global style */
+        /* Global styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -57,7 +57,8 @@
 
         /* Gallery item styles */
         .gallery-item {
-            width: 300px;
+            flex: 1; /* Equal flex size */
+            max-width: 300px; /* Set a maximum width */
             margin: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -98,39 +99,35 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <a class="left-arrow" href="mbbs.html">&#8592;</a> <!-- Left-facing arrow -->
-        <h1>MAT</h1>
+        <a class="left-arrow" href="medical_entrance.html">&#8592;</a> <!-- Left-facing arrow -->
+        <h1>Chemistry</h1>
     </div>
 
     <!-- Gallery -->
     <div class="gallery">
-        <!-- Your MAT gallery items go here -->
-        <!-- Verbal Reasoning -->
+        <!-- Physical Chemistry -->
         <div class="gallery-item">
-           <a href="verbal.html"> <img src="mp/verbal.webp" alt="Verbal Reasoning"> </a>
-            <div class="topic-title">Verbal Reasoning</div>
-            <div class="topic-description">Practice your verbal reasoning skills.</div>
+            <a href="#">
+                <img src="cp/physical.jpg" alt="blank"></a>
+                <div class="topic-title">Physical Chemistry</div>
+                <div class="topic-description">Explore the principles of physical chemistry.</div>
+            
         </div>
 
-        <!-- Numerical Reasoning -->
+        <!-- Inorganic Chemistry -->
         <div class="gallery-item">
-            <a href="Numerical.html"><img src="mp/numerical.jpg" alt="Numerical Reasoning"></a>
-            <div class="topic-title">Numerical Reasoning</div>
-            <div class="topic-description">Sharpen your numerical reasoning abilities.</div>
+            <a href="#">
+                <img src="cp/inorganic.jpg" alt="Inorganic Chemistry"></a>
+                <div class="topic-title">Inorganic Chemistry</div>
+                <div class="topic-description">Learn about the world of inorganic compounds.</div>
+            
         </div>
 
-        <!-- Logical Sequencing -->
+        <!-- Organic Chemistry -->
         <div class="gallery-item">
-           <a href="logical.html"> <img src="mp/logical.webp" alt="Logical Sequencing"></a>
-            <div class="topic-title">Logical Sequencing</div>
-            <div class="topic-description">Master logical sequencing problems.</div>
-        </div>
-
-        <!-- Spatial Relation/Abstract Reasoning -->
-        <div class="gallery-item">
-          <a href="spatial.html">  <img src="mp/abstract.jpg" alt="Spatial Relation/Abstract Reasoning"> </a>
-            <div class="topic-title">Spatial Relation/Abstract Reasoning</div>
-            <div class="topic-description">Improve your spatial & abstract reasoning skills.</div>
+           <a href="#"> <img src="cp/organic.jpg" alt="Organic Chemistry"></a>
+            <div class="topic-title">Organic Chemistry</div>
+            <div class="topic-description">Discover the complexities of organic compounds.</div>
         </div>
     </div>
 </body>
