@@ -151,28 +151,11 @@
             <input type="password" id="password" placeholder="Enter your password">
             <span class="password-toggle" onclick="togglePasswordVisibility()">&#128065;</span>
         </div>
-        <div class="select-box">
-            <select id="class">
-                <option value="" disabled selected>Select Level/class</option>
-                <option value="Class 11">Class 11 (science)</option>
-                <option value="Class 12">Class 12 (science)</option>
-                <option value="Fresher (Medical)">Fresher (medical)</option>
-                <option value="Dropper(Medical)">Dropper (medical)</option>
-                <option value="Chartered Accountant">Chartered Accountant (CAP-I)</option>
-                <option value="Chartered Accountant">Chartered Accountant (CAP-II)</option>
-                <option value="Chartered Accountant">Chartered Accountant (CAP-III)</option>
-            </select>
-        </div>
-        <div class="select-box">
-            <select id="faculty">
-                <option value="" disabled selected>Select Faculty</option>
-                <option value="MBBS Entrance">MBBS Entrance</option>
-                <option value="Nursing Entrance">Nursing Entrance</option>
-                <option value="BDS Entrance">BDS Entrance</option>
-                <option value="Chartered Accountant">Chartered Accountant</option>
-            
-            </select>
-        </div>
+        <div class="input-box">
+            <input type="password" id="confirm password" placeholder="confirm your password">
+            <span class="password-toggle" onclick="togglePasswordVisibility()">&#128065;</span>
+         </div>
+    
         <button type="submit" class="btn" onclick="registerUser()">Register</button>
         <div class="error-message" id="error-message"></div>
     </div>
